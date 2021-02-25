@@ -1,18 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Интернет-магазин</title>
-    <link rel="stylesheet" href="style\style.css">
+  <meta charset="UTF-8">
+  <title>Интернет-магазин</title>
+  <link rel="stylesheet" href="style/normalize.css">
+  <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-<header class="header center">
-    <button class="btn-cart" type="button">Главная</button>
-    <button class="btn-cart active" type="button">Корзина</button>
-</header>
-<main>
-    <div class="products center"></div>
-</main>
-<script src="./js/main.js"></script>
+  <header class="header center">
+    <div class="logo"><a href="index.html">Интернет-магазин</a></div>
+    <div class="menu">
+      <button class="btn-cart active" type="button" data-typeContent="products">Главная</button>
+      <button class="btn-cart" type="button" data-typeContent="hamburger">Бургерная</button>
+      <button class="btn-cart" type="button" data-typeContent="cart">Корзина</button>
+    </div>
+  </header>
+  <main>
+    <div class="content">
+      <div class="products" data-content="Главная">
+        <span class="goodsTotalPrice"></span>
+        <div class="productsItems"></div>
+      </div>
+      <div class="hamburger center invisible" data-content="Бургерная">
+        <form action="#">
+          <div class="sizeHamburger">
+            <span>Размер гамбургера:</span>
+            <label>
+              <input type="radio" name="size" id="size1" data-price="50" data-calories="20" checked>
+              Маленький
+            </label>
+            <label>
+              <input type="radio" name="size" id="size2" data-price="100" data-calories="40">
+              Большой
+            </label>
+          </div>
+          <div class="stuffing">
+            <label>
+              <input type="radio" name="stuffing" id="stuffing1" data-type="cheese" data-price="10" data-calories="20"
+                checked>
+              С сыром
+            </label>
+            <label>
+              <input type="radio" name="stuffing" id="stuffing2" data-type="salad" data-price="20" data-calories="5">
+              С салатом
+            </label>
+            <label>
+              <input type="radio" name="stuffing" id="stuffing3" data-type="potato" data-price="15" data-calories="10">
+              С картофелем
+            </label>
+          </div>
+          <div class="extra">
+            <label>
+              <input type="checkbox" name="extra" id="flavoring" data-type="flavoring" data-price="15" data-calories="0"
+                checked>
+              Посыпать приправой
+            </label>
+            <label>
+              <input type="checkbox" name="extra" id="mayo" data-type="mayo" data-price="20" data-calories="5">
+              Полить майонезом
+            </label>
+          </div>
+          <div>
+            Cтоимость и калорийность гамбургера:
+            <div class="result"></div>
+          </div>
+        </form>
+      </div>
+      <div class="cart center invisible" data-content="Корзина">
+        Корзина
+      </div>
+    </div>
+  </main>
+  <script src="./js/product.js"></script>
+  <script src="./js/menu.js"></script>
+  <script src="./js/cart.js"></script>
+  <script src="./js/hamburger.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>
