@@ -162,10 +162,12 @@ class List {
 
   filter(value) {
     const regexp = new RegExp(value, "i");
-    this.filtered = this.allProducts.filter((product) =>
-      regexp.test(product.product_name)
-    );
-    this.allProducts.forEach((el) => el);
+    this.filtered = this.allProducts.filter((product) => {
+      return regexp.test(product.product_name);
+    });
+    this.allProducts.forEach((el) => {
+      console.log(el);
+    });
   }
 
   _init() {
@@ -206,9 +208,9 @@ class ProductList extends List {
       });
     document
       .querySelector(".search-form")
-      .addEventListener("submit", (event) => {
+      .addEventListener("change", (event) => {
         event.preventDefault();
-        this.filter(document.querySelector(".search-form").value);
+        this.filter(document.querySelector(".search-field").value);
       });
   }
 }

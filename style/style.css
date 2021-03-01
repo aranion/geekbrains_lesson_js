@@ -2,10 +2,6 @@ body {
   font-family: 'SF Pro Display', sans-serif;
 }
 
-button {
-  outline: none;
-}
-
 a {
   color: #2f2a2d;
   text-decoration: none;
@@ -18,6 +14,11 @@ p {
 
 input, button {
   outline: none;
+}
+
+.center {
+  padding-left: calc(50vw - 45vw);
+  padding-right: calc(50vw - 45vw);
 }
 
 .header {
@@ -35,9 +36,8 @@ input, button {
   align-items: center;
 }
 
-.center {
-  padding-left: calc(50vw - 45vw);
-  padding-right: calc(50vw - 45vw);
+.menu {
+  display: flex;
 }
 
 .btn-cart, .btn-menu {
@@ -70,10 +70,6 @@ input, button {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.menu {
-  display: flex;
 }
 
 .cart {
@@ -145,7 +141,6 @@ input, button {
 }
 
 .right-block {
-  /* width: 100%; */
   display: flex;
   flex-direction: column;
   align-items: flex-end;

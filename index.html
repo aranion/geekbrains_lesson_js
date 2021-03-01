@@ -10,9 +10,6 @@
   <header class="header center">
     <div class="logo"><a href="index.html">Интернет-магазин</a></div>
     <div class="menu">
-      <button class="btn-menu active" type="button" data-typeContent="products">Главная</button>
-      <button class="btn-menu" type="button" data-typeContent="hamburger">Бургерная</button>
-      <!-- <button class="btn-menu" type="button" data-typeContent="cart">Корзина</button> -->
       <div class="cart">
         <from action='#' class="search-form">
           <input type="text" class="search-field">
@@ -33,7 +30,6 @@
             <path
               d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0" />
           </svg>
-          <!-- <div class="goods-value invisible">1</div> -->
         </a>
         <div class="cart-block invisible"></div>
       </div>
@@ -41,10 +37,7 @@
   </header>
   <main>
     <div class="content">
-      <div class="products" data-content="Главная">
-        <!-- <span class="goodsTotalPrice"></span> -->
-        <!-- <div class="productsItems"></div> -->
-      </div>
+      <div class="products" data-content="Главная"></div>
       <div class="hamburger center invisible" data-content="Бургерная">
         <form action="#">
           <div class="sizeHamburger">
@@ -96,9 +89,7 @@
     </div>
   </main>
   <script src="./js/product.js"></script>
-  <script src="./js/menu.js"></script>
   <script src="./js/cart.js"></script>
-  <script src="./js/hamburger.js"></script>
   <script src="./js/main.js"></script>
 </body>
 </html>
