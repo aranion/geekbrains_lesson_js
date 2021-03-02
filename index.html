@@ -9,87 +9,40 @@
 <body>
   <header class="header center">
     <div class="logo"><a href="index.html">Интернет-магазин</a></div>
-    <div class="menu">
-      <div class="cart">
-        <from action='#' class="search-form">
-          <input type="text" class="search-field">
-          <button class="btn-search" type="submit">
-            <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" viewBox="0 0 32 32" xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <path
-                d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z"
-                id="XMLID_223_" /></svg>
-          </button>
-        </from>
-        <a class="btn-cart" type="submit" value="Корзина">
-          <svg class="btn-cart-svg" height="512pt" viewBox="0 -31 512.00026 512" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0" />
-            <path
-              d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0" />
-            <path
-              d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0" />
-          </svg>
-        </a>
-        <div class="cart-block invisible"></div>
-      </div>
-    </div>
+    <div class="menu"></div>
   </header>
   <main>
     <div class="content">
-      <div class="products" data-content="Главная"></div>
-      <div class="hamburger center invisible" data-content="Бургерная">
-        <form action="#">
-          <div class="sizeHamburger">
-            <span>Размер гамбургера:</span>
-            <label>
-              <input type="radio" name="size" id="size1" data-price="50" data-calories="20" checked>
-              Маленький
-            </label>
-            <label>
-              <input type="radio" name="size" id="size2" data-price="100" data-calories="40">
-              Большой
-            </label>
-          </div>
-          <div class="stuffing">
-            <label>
-              <input type="radio" name="stuffing" id="stuffing1" data-type="cheese" data-price="10" data-calories="20"
-                checked>
-              С сыром
-            </label>
-            <label>
-              <input type="radio" name="stuffing" id="stuffing2" data-type="salad" data-price="20" data-calories="5">
-              С салатом
-            </label>
-            <label>
-              <input type="radio" name="stuffing" id="stuffing3" data-type="potato" data-price="15" data-calories="10">
-              С картофелем
-            </label>
-          </div>
-          <div class="extra">
-            <label>
-              <input type="checkbox" name="extra" id="flavoring" data-type="flavoring" data-price="15" data-calories="0"
-                checked>
-              Посыпать приправой
-            </label>
-            <label>
-              <input type="checkbox" name="extra" id="mayo" data-type="mayo" data-price="20" data-calories="5">
-              Полить майонезом
-            </label>
-          </div>
-          <div>
-            Cтоимость и калорийность гамбургера:
-            <div class="result"></div>
-          </div>
-        </form>
+      <div class="products" data-content="Главная">
+        <textarea class="textarea-class" name="text" id="text" cols="30" rows="10">
+One: 'Hi Mary.' Two: 'Oh, hi.'
+One: 'How are you doing?'
+Two: 'I'm doing alright. How about you?'
+One: 'Not too bad. The weather is great isn't it?'
+Two: 'Yes. It's absolutely beautiful today.'
+One: 'I wish it was like this more frequently.'
+Two: 'Me too.'
+One: 'So where are you going now?'
+Two: 'I'm going to meet a friend of mine at the department store'
+One: 'Going to do a little shopping?'
+Two: 'Yeah, I have to buy some presents for my parents.'
+One: 'What's the occasion?'
+Two: 'It's their anniversary.'
+One: 'That's great. Well, you better get going. You don't want to be late.'
+Two: 'I'll see you next time.'
+One: 'Sure.' Bye.'
+        </textarea>
       </div>
-      <div class="cart-content center invisible" data-content="Корзина">
-        Корзина
-      </div>
+      <form action="#" class="form-lesson4">
+        <input type="text" name="name" id="name" value="Name">
+        <input type="text" name="phone" id="phone" value="+7(000)000-0000">
+        <input type="text" name="email" id="email" value="email@mail.ru">
+        <input type="text" name="text" id="text" value="Text qwerrtyu asdff">
+        <button name="send">проверить</button>
+      </form>
     </div>
   </main>
-  <script src="./js/product.js"></script>
-  <script src="./js/cart.js"></script>
+  <script src="./js/1.js"></script>
   <script src="./js/main.js"></script>
 </body>
 </html>
