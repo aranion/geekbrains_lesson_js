@@ -11,15 +11,17 @@
     <header>
         <div class="logo">Интернет-магазин</div>
         <div class="cart">
-            <form action="#" class="search-form">
+            <form action="#" class="search-form" @submit.prevent='' @input='filterGoods()'>
                 <input type="text" class="search-field" v-model="searchLine">
-                <button class="btn-search" type="submit" @click='filterGoods()'>
+                <button class="btn-search" type="submit">
                     <i class="fas fa-search"></i>
                 </button>
             </form>
-            <button class="btn-cart" type="button" @click='isVisibleCartFn()'>Корзина</button>
+            <button class="btn-cart" type="button" @click='toggleCart()'>Корзина
+                <span class="btn-cart_value" v-if='cartProducts.length'>{{cartProducts.length}}</span>
+            </button>
             <div class="cart-block " :class='{invisible: isVisibleCart}'>
-                <div class="cart-clean" v-if="cartProducts.length === 0"> Товаров в корзине нет</div>
+                <div class="goods-list" v-if="!cartProducts.length"> Товаров в корзине нет</div>
                 <div class="cart-item" v-for="product of cartProducts" :key="product.id_product" v-else="">
                     <div class="product-bio">
                         <img :src="imgCart" alt="Some image">
@@ -34,12 +36,15 @@
                         <button class="del-btn" @click='removeProduct(product)'>&times;</button>
                     </div>
                 </div>
+                <p class="product-summ-price" v-if="cartProducts.length">Всего:
+                    {{cartProducts.reduce((sum, el) => sum += el.price*el.quantity,0)}} ₽</p>
             </div>
         </div>
     </header>
     <main>
         <div class="products">
-            <div class="product-item" v-for="product of products" :key="product.id_product">
+            <div class="product-clean" v-if="!filtered.length">Нет данных</div>
+            <div class="product-item" v-for="product of filtered" :key="product.id_product" v-else=''>
                 <img :src="imgCatalog" alt="Some img">
                 <div class="desc">
                     <h3>{{product.product_name}}</h3>
