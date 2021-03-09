@@ -1,80 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Интернет-магазин</title>
-  <link rel="stylesheet" href="style/normalize.css">
-  <link rel="stylesheet" href="style/style.css">
+    <meta charset="UTF-8">
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="header center">
-    <div class="logo"><a href="index.html">Интернет-магазин</a></div>
-    <div class="menu">
-      <button class="btn-cart active" type="button" data-typeContent="products">Главная</button>
-      <button class="btn-cart" type="button" data-typeContent="hamburger">Бургерная</button>
-      <button class="btn-cart" type="button" data-typeContent="cart">Корзина</button>
-    </div>
-  </header>
-  <main>
-    <div class="content">
-      <div class="products" data-content="Главная">
-        <span class="goodsTotalPrice"></span>
-        <div class="productsItems"></div>
-      </div>
-      <div class="hamburger center invisible" data-content="Бургерная">
-        <form action="#">
-          <div class="sizeHamburger">
-            <span>Размер гамбургера:</span>
-            <label>
-              <input type="radio" name="size" id="size1" data-price="50" data-calories="20" checked>
-              Маленький
-            </label>
-            <label>
-              <input type="radio" name="size" id="size2" data-price="100" data-calories="40">
-              Большой
-            </label>
-          </div>
-          <div class="stuffing">
-            <label>
-              <input type="radio" name="stuffing" id="stuffing1" data-type="cheese" data-price="10" data-calories="20"
-                checked>
-              С сыром
-            </label>
-            <label>
-              <input type="radio" name="stuffing" id="stuffing2" data-type="salad" data-price="20" data-calories="5">
-              С салатом
-            </label>
-            <label>
-              <input type="radio" name="stuffing" id="stuffing3" data-type="potato" data-price="15" data-calories="10">
-              С картофелем
-            </label>
-          </div>
-          <div class="extra">
-            <label>
-              <input type="checkbox" name="extra" id="flavoring" data-type="flavoring" data-price="15" data-calories="0"
-                checked>
-              Посыпать приправой
-            </label>
-            <label>
-              <input type="checkbox" name="extra" id="mayo" data-type="mayo" data-price="20" data-calories="5">
-              Полить майонезом
-            </label>
-          </div>
-          <div>
-            Cтоимость и калорийность гамбургера:
-            <div class="result"></div>
-          </div>
-        </form>
-      </div>
-      <div class="cart center invisible" data-content="Корзина">
-        Корзина
-      </div>
-    </div>
-  </main>
-  <script src="./js/product.js"></script>
-  <script src="./js/menu.js"></script>
-  <script src="./js/cart.js"></script>
-  <script src="./js/hamburger.js"></script>
-  <script src="./js/main.js"></script>
+<div id="app">
+    <header>
+        <div class="logo">Интернет-магазин</div>
+        <div class="cart">
+            <form action="#" class="search-form" @submit.prevent='' @input='filterGoods()'>
+                <input type="text" class="search-field" v-model="searchLine">
+                <button class="btn-search" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <button class="btn-cart" type="button" @click='toggleCart()'>Корзина
+                <span class="btn-cart_value" v-if='cartProducts.length'>{{cartProducts.length}}</span>
+            </button>
+            <div class="cart-block " :class='{invisible: isVisibleCart}'>
+                <div class="goods-list" v-if="!cartProducts.length"> Товаров в корзине нет</div>
+                <div class="cart-item" v-for="product of cartProducts" :key="product.id_product" v-else="">
+                    <div class="product-bio">
+                        <img :src="imgCart" alt="Some image">
+                        <div class="product-desc">
+                            <p class="product-title">{{product.product_name}}</p>
+                            <p class="product-quantity">Количество: {{product.quantity}}</p>
+                            <p class="product-single-price">{{product.price}}₽ за ед.</p>
+                        </div>
+                    </div>
+                    <div class="right-block">
+                        <p class="product-price">{{product.quantity * product.price}}₽</p>
+                        <button class="del-btn" @click='removeProduct(product)'>&times;</button>
+                    </div>
+                </div>
+                <p class="product-summ-price" v-if="cartProducts.length">Всего:
+                    {{cartProducts.reduce((sum, el) => sum += el.price*el.quantity,0)}} ₽</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="products">
+            <div class="product-clean" v-if="!filtered.length">Нет данных</div>
+            <div class="product-item" v-for="product of filtered" :key="product.id_product" v-else=''>
+                <img :src="imgCatalog" alt="Some img">
+                <div class="desc">
+                    <h3>{{product.product_name}}</h3>
+                    <p>{{product.price}}₽</p>
+                    <button class="buy-btn" @click="addProduct(product)">Купить</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+    integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
