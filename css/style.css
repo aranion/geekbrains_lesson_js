@@ -27,6 +27,7 @@ button:focus {
     border-radius: 5px;
     transition: all ease-in-out .25s;
     cursor: pointer;
+    position: relative;
 }
 
 .btn-cart:hover {
@@ -98,8 +99,9 @@ img {
     padding: 15px
 }
 
-.cart {
+.menu {
     position: relative;
+    display: flex;
 }
 
 .cart-block {
@@ -221,4 +223,10 @@ img {
     border-top: 1px solid #fafafa;
     border-bottom: 1px solid #fafafa;
     border-radius: 10px;
+}
+
+.error {
+    text-align: center;
+    padding-top: 25%;
+    font-size: 20px;
 }
