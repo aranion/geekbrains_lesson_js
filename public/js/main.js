@@ -11,9 +11,46 @@ const app = new Vue({
       return fetch(url)
         .then((this.isCatch = false))
         .then((result) => result.json())
-        .catch((error) => {
-          console.log(error);
+        .catch((err) => {
+          this.$refs.error.setError(err);
           this.isCatch = true;
+        });
+    },
+    postJson(url, data) {
+      return fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      })
+        .then((result) => result.json())
+        .catch((err) => this.$refs.error.setError(err));
+    },
+    putJson(url, data) {
+      return fetch(url, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then((result) => {
+          debugger;
+          result.json();
+        })
+        .catch((error) => {
+          this.$refs.error.setError(error);
+        });
+    },
+    deleteJson(url) {
+      return fetch(url, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((result) => result.json())
+        .catch((error) => {
+          this.$refs.error.setError(error);
         });
     },
   },

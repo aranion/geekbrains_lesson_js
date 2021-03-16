@@ -13,41 +13,48 @@ Vue.component("cart", {
   },
   methods: {
     addProduct(item) {
-      this.$parent.getJson(API + this.url.addCart).then((data) => {
-        if (data.result === 1) {
-          let find = this.cartItems.find(
-            (cartItem) => cartItem.id_product === +item.id_product
-          );
-          if (find) {
-            find.quantity++;
-          } else {
-            this.cartItems.push({ ...item, quantity: 1 });
+      let find = this.cartItems.find((el) => el.id_product === item.id_product);
+
+      if (find) {
+        this.$parent.putJson(`/api/cart/${find.id_product}`, { quantity: 1 });
+        find.quantity++;
+      } else {
+        let prod = Object.assign({ quantity: 1 }, item);
+        // this.cartItems.push({ ...item, quantity: 1 });
+        this.$parent.postJson("/api/cart", prod).then((data) => {
+          if (data.result === 1) {
+            this.cartItems.push(prod);
           }
-        } else {
-          alert("Error");
-        }
-      });
+        });
+      }
     },
     removeProduct(item) {
-      this.$parent.getJson(API + this.url.deleteCart).then((data) => {
+      // this.$parent.deleteJson(`/api/cart/${item.id_product}`).then((data) => {
+
+      // let find = this.cartItems.find((el) => el.id_product === item.id_product);
+
+      this.$parent.deleteJson(`/api/cart/${item.id_product}`).then((data) => {
         if (data.result === 1) {
-          if (item.quantity > 1 && item !== undefined) {
+          if (item.quantity > 1) {
             item.quantity--;
           } else {
             this.cartItems.splice(this.cartItems.indexOf(item), 1);
           }
-        } else {
-          alert("Error");
         }
       });
+      // }
+      // }
+      // });
     },
     toggleCart() {
       this.showCart = !this.showCart;
     },
   },
   mounted() {
-    this.$parent.getJson(API + this.url.cart).then((data) => {
-      this.cartItems = [...data.contents];
+    this.$parent.getJson("/api/cart").then((data) => {
+      for (let el of data.contents) {
+        this.cartItems.push(el);
+      }
     });
   },
   template: `
@@ -78,6 +85,11 @@ Vue.component("cart", {
 
 Vue.component("cart-item", {
   props: ["cartItem", "img", "removeProduct", "addProduct"],
+  data() {
+    return {
+      cartAPI: this.$root.$refs.cart,
+    };
+  },
   template: `
         <div class="cart-item" >
           <div class="product-bio">
@@ -91,8 +103,8 @@ Vue.component("cart-item", {
           <div class="right-block">
               <p class="product-price">{{cartItem.quantity * cartItem.price}}₽</p>
               <div class='control-btn'> 
-                <button class="del-btn" @click='addProduct(cartItem)'>&#9650;</button>
-                <button class="del-btn" @click='removeProduct(cartItem)'>&#9660;</button>
+                <button class="buy-btn" @click="cartAPI.addProduct(cartItem)">&#9650;</button>
+                <button class="del-btn" @click='cartAPI.removeProduct(cartItem)'>&#9660;</button>
               </div>
           </div>
         </div>
