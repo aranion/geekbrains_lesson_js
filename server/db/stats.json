@@ -1,0 +1,82 @@
+[
+    {
+        "time": "20 Mar 2021, 10:46:15 pm",
+        "prod_name": {
+            "id_product": 124,
+            "product_name": "Мышка",
+            "price": 1000,
+            "quantity": 2
+        },
+        "action": "put"
+    },
+    {
+        "time": "20 Mar 2021, 10:46:19 pm",
+        "prod_name": {
+            "id_product": 457,
+            "product_name": "Блок",
+            "price": 30000,
+            "quantity": 1
+        },
+        "action": "post"
+    },
+    {
+        "time": "20 Mar 2021, 10:46:22 pm",
+        "prod_name": {
+            "id_product": 456,
+            "product_name": "Клавиатура",
+            "price": 1000,
+            "quantity": 1
+        },
+        "action": "post"
+    },
+    {
+        "time": "20 Mar 2021, 10:48:54 pm",
+        "prod_name": {
+            "id_product": 124,
+            "product_name": "Мышка",
+            "price": 1000,
+            "quantity": 1
+        },
+        "action": "put"
+    },
+    {
+        "time": "20 Mar 2021, 10:48:54 pm",
+        "prod_name": {
+            "id_product": 124,
+            "product_name": "Мышка",
+            "price": 1000,
+            "quantity": 1
+        },
+        "action": "delete"
+    },
+    {
+        "time": "20 Mar 2021, 10:48:54 pm",
+        "prod_name": {
+            "id_product": 123,
+            "product_name": "Ноутбук",
+            "price": 45600,
+            "quantity": 1
+        },
+        "action": "delete"
+    },
+    {
+        "time": "20 Mar 2021, 10:48:55 pm",
+        "prod_name": {
+            "id_product": 457,
+            "product_name": "Блок",
+            "price": 30000,
+            "quantity": 1
+        },
+        "action": "delete"
+    },
+    {
+        "time": "20 Mar 2021, 10:48:55 pm",
+        "prod_name": {
+            "id_product": 456,
+            "product_name": "Клавиатура",
+            "price": 1000,
+            "quantity": 1
+        },
+        "action": "delete"
+    }
+]
