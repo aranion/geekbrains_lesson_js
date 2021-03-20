@@ -34,11 +34,10 @@ const app = new Vue({
         body: JSON.stringify(data),
       })
         .then((result) => {
-          debugger;
           result.json();
         })
-        .catch((error) => {
-          this.$refs.error.setError(error);
+        .catch((err) => {
+          this.$refs.error.setError(err);
         });
     },
     deleteJson(url) {
@@ -49,8 +48,8 @@ const app = new Vue({
         },
       })
         .then((result) => result.json())
-        .catch((error) => {
-          this.$refs.error.setError(error);
+        .catch((err) => {
+          this.$refs.error.setError(err);
         });
     },
   },
