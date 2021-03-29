@@ -1,0 +1,362 @@
+@import ./_sass/vars
+@import ./_sass/mixins
+
+@font-face
+  font-family: "Lato"
+  src: url('./fonts/Lato-Light.ttf') format('truetype')
+
+@font-face
+  font-family: "LatoBold"
+  src: url('./fonts/Lato-Black.ttf') format('truetype')
+
+@-webkit-keyframes rotate-hor-center
+  0%
+  -webkit-transform: rotateY(0)
+  transform: rotateY(0)
+
+  100%
+  -webkit-transform: rotateY(-360deg)
+  transform: rotateY(-360deg)
+@keyframes rotate-hor-center
+  0%
+    -webkit-transform: rotateY(0)
+    transform: rotateY(0)
+
+  100%
+    -webkit-transform: rotateY(-360deg)
+    transform: rotateY(-360deg)
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+input
+  &[type='number']
+    -moz-appearance: textfield
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button
+    -webkit-appearance: none
+
+summary
+  &::-webkit-details-marker
+    display: none
+  &:active,
+  &:hover,
+  &:focus
+    outline: 0
+    outline-offset: 0
+
+details
+  outline: 0
+  outline-offset: 0
+
+ul
+  list-style-type: none
+
+a
+  text-decoration: none 
+  &:hover
+    cursor: pointer
+
+body
+  font-family: "Lato"
+
+input:focus,
+button:focus
+  outline: none
+  outline-offset: 0
+
+.center
+  padding-left: calc(50% - 570px)
+  padding-right: calc(50% - 570px)
+
+.center2
+  @extend .center
+
+.button
+  border: 1px solid $colorSelect
+  font-size: 16px
+  line-height: 19px
+  color: $colorSelect
+  background-color: #fff
+  padding: 15px 39px
+  margin: 0 auto
+  cursor: pointer
+  transition: background .25s
+
+  &:hover
+    background: $colorSelectHover
+    border: 1px solid $colorSelectHover
+    color: #fff
+
+.header
+  background-color: $bgColorHeadingFooter
+  height: 75px
+  +centerFlex()
+  flex-direction: row
+  justify-content: space-between
+  position: relative
+  // &__search
+  //   margin-left: 41px
+  .btn-search
+    background-color: transparent
+    border: none
+    color: #fafafa
+    font-size: 1.2em
+    position: absolute
+    bottom: 19%
+    right: 5px
+
+  .search-form
+    position: relative
+    margin-right: 50px
+    display: inline-block
+
+  .search-field:focus
+    outline: none
+    background-color: #fafafa
+    color: #2f2a2d
+  .search-field
+    box-sizing: border-box
+    width: 200px
+    padding: 10px
+    padding-right: 35px
+    color: #fafafa
+    background-color: transparent
+    border: none
+    border-top: 1px solid #fafafa
+    border-bottom: 1px solid #fafafa
+    border-radius: 10px
+  &__right
+    display: flex
+    align-items: center
+  &__box
+    display: block
+    &_nav
+      display: none
+
+  &__account
+    margin-left: 34px
+    margin-right: 34px
+
+  &__menu_wrapper
+    // display: none
+    width: 100%
+    background: rgba(0, 0, 0, 0.5)
+    position: absolute
+    z-index: 10
+    right: 0
+    top: 75px
+    visibility: hidden
+    opacity: 0
+    transition: opacity .4s
+
+  &__menu_box
+    width: 232px
+    min-height: 764px
+    display: flex
+    flex-direction: column
+    background: $bgColorDefault
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    padding: 34px
+    margin-left: auto
+    font-size: 14px
+    line-height: 17px
+    position: relative
+
+  &__menu_svg
+    display: block
+    position: absolute
+    right: 16px
+    top: 16px
+
+  &__menu_title
+    font-family: "LatoBold"
+    font-weight: bold
+    padding-bottom: 24px
+    text-transform: uppercase
+
+  &__menu_type
+    color: $colorSelect
+    text-transform: uppercase
+
+  &__menu_link
+    display: inline-block
+    color: $colorText
+    padding: 10px 25px
+    &:hover
+      color: $colorSelect
+
+#switcher
+  position: absolute
+  left: -999999px
+  &:checked ~ .header__menu_wrapper
+    // top: 74px
+    visibility: visible
+    opacity: 1
+
+.footer
+  width: 100%
+  height: 100%
+
+  &__top
+    +centerFlex()
+    background-color: $bgColorHeadingFooter
+    flex-direction: row
+    flex-wrap: wrap
+    width: 100%
+    min-height: 341px
+
+  &__top_item
+    flex-basis: 360px
+    +centerFlex()
+    color: $colorTextFooter
+    text-align: center
+    padding: 15px
+
+  &__top_item:not(:last-child)
+    padding-right: 15px
+
+  &__top_title
+    font-size: 20px
+    line-height: 24px
+    padding-top: 20px
+    padding-bottom: 16px
+
+  &__top_title_a
+    color: $colorTextFooter
+
+  &__top_title_a:hover
+    color: $colorSelect
+
+  &__top_text
+    font-weight: 300
+    font-size: 14px
+    line-height: 17px
+
+  &__center
+    display: flex
+    align-items: center
+    width: 100%
+    min-height: 448px
+    flex-wrap: wrap
+    background-image: url(./images/all/bg_footer_center.jpg)
+    background-repeat: no-repeat
+    background-position: left bottom
+    background-size: cover
+
+  &__center_left
+    flex-basis: 360px
+    flex-grow: 1
+    height: 100%
+    +centerFlex()
+    text-align: center
+
+  &__center_left_text
+    font-size: 20px
+    line-height: 24px
+    color: $bgColorHeadingFooter
+    padding-top: 32px
+    max-width: 360px
+
+  &__center_right
+    flex-basis: 557px
+    flex-grow: 1
+    height: 100%
+    +centerFlex()
+
+  &__center_right_heading
+    font-size: 24px
+    color: $bgColorHeadingFooter
+    line-height: 167.2%
+
+  &__center_right_text
+    font-family: "Lato"
+    @extend .footer__center_right_heading
+    font-size: 19px
+    padding-bottom: 32px
+
+  &__center_wrapper
+    display: flex
+    line-height: 50px
+    font-size: 14px
+
+  &__center_input
+    width: 256px
+    height: 50px
+    padding: 7px 22px
+    border-top-left-radius: 25px
+    border-bottom-left-radius: 25px
+    color: $bgColorHeadingFooter
+    background: $bgColorInput
+    border: none
+
+  &__center_button
+    display: inline-block
+    border: none
+    width: 100px
+    height: 50px
+    padding: 0 21px
+    background: $colorSelect
+    border-top-right-radius: 25px
+    border-bottom-right-radius: 25px
+    color: $bgColorDefault
+    transition: background .25s
+    cursor: pointer
+
+  &__center_button:hover
+    background: $colorSelectHover
+
+  &__bottom
+    background-color: $bgColorHeadingFooter
+    height: 80px
+    +centerFlex()
+    flex-direction: row
+    justify-content: space-between
+
+  &__copyright
+    font-size: 16px
+    line-height: 19px
+    color: $colorTextFooter
+
+  &__bottom_right
+    display: flex
+
+  &__bottom_icon
+    width: 32px
+    height: 32px
+    background: $bgColorDefault
+    transition: background 0.5s ease-in-out
+
+  &__bottom_icon_a
+    width: 100%
+    height: 100%
+    +centerFlex()
+
+  &__bottom_icon_svg
+    fill: $bgColorHeadingFooter
+
+  &__bottom_icon:not(:last-child)
+    margin-right: 8px
+
+  &__bottom_icon:hover
+    background: $colorSelectHover
+    color: $bgColorDefault
+    -webkit-animation: rotate-hor-center 0.25s cubic-bezier(0.455, 0.030, 0.515, 0.955) both
+    animation: rotate-hor-center 0.25s cubic-bezier(0.455, 0.030, 0.515, 0.955) both
+
+  &__bottom_icon:hover .footer__bottom_icon_svg
+    fill: $bgColorDefault
+.notfound
+  min-height: 150px
+  +centerFlex()
+  &title
+    font-size: 30px
+
+@import ./_sass/index
+@import ./_sass/catalog
+@import ./_sass/product
+@import ./_sass/cart
+@import ./_sass/registration
+@import ./_sass/_media

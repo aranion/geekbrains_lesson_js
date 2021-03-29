@@ -1,33 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Интернет-магазин</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>GB project</title>
 </head>
 <body>
-<div id="app">
-    <header>
-        <div class="logo">Интернет-магазин</div>
-        <div class="menu">
-            <search ref='search'></search>
-            <cart ref='cart'></cart>
-        </div>
-    </header>
-    <main>
-        <error ref='error' v-show='isCatch'> </error>
-        <products ref='products' v-show='!isCatch'></products>
-    </main>
-</div>
-<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+  <div id="app">
+    <Top ref='Top'></Top>
+    <Mine ref='Mine'></Mine>
+    <Bottom></Bottom>
+  </div>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
     integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="js/CartComponent.js"></script>
-<script src="js/ProductComponent.js"></script>
-<script src="js/SearchComponent.js"></script>
-<script src="js/ErrorComponent.js"></script>
-<script src="js/main.js"></script>
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="components/Top/Top.js"></script>
+<script src="components/Top/Menu/Menu.js"></script>
+<script src="components/Top/Menu/Search/Search.js"></script>
+<script src="components/Footer/Footer.js"></script>
+<script src="components/Footer/Services/Services.js"></script>
+<script src="components/Footer/Subscribe/Subscribe.js"></script>
+<script src="components/Footer/SocialLinks/SocialLinks.js"></script>
+<script src="components/Mine/Mine.js"></script>
+<script src="components/Mine/Home/Home.js"></script>
+<script src="components/Mine/Home/Promo/Promo.js"></script>
+<script src="components/Mine/Home/Categories/Categories.js"></script>
+<script src="components/Mine/Home/FeaturedItems/FeaturedItems.js"></script>
+<script src="components/Mine/Home/FeaturedItems/Good/Good.js"></script>
+<script src="components/Mine/Registration/Registration.js"></script>
+<script src="components/Mine/Cart/Cart.js"></script>
+<script src="components/Mine/Cart/CartItem/CartItem.js"></script>
+<script src="components/Mine/Catalog/Catalog.js"></script>
+<script src="components/Mine/Product/Product.js"></script>
+<script src="components/Mine/Product/Navigation/Navigation.js"></script>
+<script src="components/Mine/Product/Slider/Slider.js"></script>
+<script src="components/Mine/Product/Options/Options.js"></script>
+<script src="components/NotFound/NotFound.js"></script>
+
+<script src="App.js"></script>
 </body>
 </html>

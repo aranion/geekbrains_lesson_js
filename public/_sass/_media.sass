@@ -1,0 +1,343 @@
+// .center,
+// .center2
+//   padding-left: 15px
+//   padding-right: 15px
+
+// @media (min-width: 575.98px)
+//   .center
+//     padding-left: calc(50% - 270px)
+//     padding-right: calc(50% - 270px)
+//   .center2
+//     padding-left: calc(50% - 270px)
+//     padding-right: calc(50% - 270px)
+
+// @media (min-width: 767.98px)
+//   .center,
+//   .center2
+//     padding-left: calc(50% - 360px)
+//     padding-right: calc(50% - 360px)
+
+// @media (min-width: 991.98px)
+// .center,
+// .center2
+//   padding-left: calc(50% - 480px)
+//   padding-right: calc(50% - 480px)
+
+// @media (min-width: 1199.98px)
+//   .center,
+//   .center2
+//     padding-left: calc(50% - 590px)
+//     padding-right: calc(50% - 590px)
+@media (max-width: 1023px)
+  .center
+    padding-left: calc(50% - 360px)
+    padding-right: calc(50% - 360px)
+  .center2
+    padding-left: calc(50% - 375px)
+    padding-right: calc(50% - 375px)
+
+  .promo
+    &__right
+      padding-left: 40px
+    &__title
+      font-size: 44px
+      line-height: 53px
+    &__text
+      font-size: 25px
+
+  .catalog
+    margin-top: 20px
+    gap: 20px
+
+    &__text
+      font-size: 16px
+
+    &__heading
+      font-size: 23px
+      line-height: 30px
+
+    &__item_big
+      margin-top: 20px
+
+  .sort
+    padding-top: 24px
+    &__filter
+      padding-left: 0
+    &__param
+      margin-left: auto
+
+  .featured
+    &__index
+      padding-bottom: 65px
+    &__content
+      padding: 20px 18px
+    &__text
+      margin-bottom: 73px
+    &__items
+      gap: 15px
+    &__footer
+      padding-top: 33px
+    &__catalog
+      padding-top: 40px
+      padding-bottom: 64px
+    &__item_mobile
+      display: none
+
+  .pagination
+    &_catalog
+      margin-top: 41px
+
+  .product
+    height: 624px
+    &__img
+      height: 565px
+
+  .description
+    &__center
+      padding-left: 0
+      padding-right: 0
+    &__wrapper
+      margin-top: 0
+      padding: 64px calc(50% - 320px)
+
+  .cart
+    margin-top: 59px
+    flex-direction: column
+    &__input
+      padding-top: 22px
+      justify-content: space-evenly
+    &__item
+      width: 100%
+    &__link
+      max-width: 210px
+      display: inline-block
+    &__left
+      padding-bottom: 64px
+    &__right
+      margin-left: 0
+    &__right_row
+      display: flex
+      justify-content: space-between
+      flex-direction: row
+    &__right_box2
+      height: 214px
+    &__right_line
+      margin: 18px 0
+
+  .registration
+    padding-top: 40px
+    padding-bottom: 96px
+    &__right
+      padding-left: 23px
+    &__right_title,
+    &__right_text,
+    &__right_ul
+      font-weight: 300
+      font-size: 16px
+      line-height: 19px
+    &__right_text
+      padding-top: 32px
+      padding-bottom: 22px
+    &__right_li
+      padding-bottom: 16px
+    &__left_other
+      display: block
+
+  .footer
+    &__top
+      padding-bottom: 65px
+      padding-top: 48px
+    &__center
+      padding-top: 54px
+      padding-bottom: 140px
+      &_right
+        padding-top: 48px
+      &_right_text
+        padding-bottom: 27px
+
+@media (max-width: 667px)
+  .center,
+  .center2
+    padding-left: 15px
+    padding-right: 15px
+
+  .header
+    &__cart,
+    &__menu_box
+      width: 100%
+    &__box
+      display: none
+      &_nav
+        display: flex
+        justify-content: space-around
+        padding: 30px 0
+
+  .promo
+    &__left
+      display: none
+    &__right
+      width: 100%
+      min-height: 360px
+    &__title
+      font-size: 38px
+      line-height: 46px
+    &__text
+      font-size: 21px
+
+  .title
+    flex-direction: column
+    justify-content: center
+    &__text
+      padding-bottom: 32px
+    &__text_mobile
+      padding-bottom: 0
+
+  .catalog
+    margin-top: 64px
+    flex-wrap: wrap
+    gap: 32px
+    &__center
+      padding-left: calc(50vw - 171.5px)
+      padding-right: calc(50vw - 171.5px)
+    &__item_big
+      height: 111px
+      margin-top: 32px
+      overflow: hidden
+    &__big_img
+      height: 111px
+      object-fit: cover
+
+  .sort
+    align-items: center
+    &__param
+      font-size: 12px
+      line-height: 14px
+    &__title
+      display: none
+    &__filter_svg
+      width: 37.5px
+      height: 25px
+    &__filter_active:hover
+      top: 24px
+
+  .featured
+    &__index
+      padding-top: 64px
+      padding-bottom: 97px
+    &__text
+      margin-bottom: 64px
+    &__footer
+      padding-top: 41px
+    &_product
+      padding-top: 64px
+      padding-bottom: 64px
+
+  .pagination
+    &_catalog
+      margin-top: 40px
+
+  .product
+    &__img
+      height: 454px
+
+  .description
+    &__center
+      padding-left: 0
+      padding-right: 0
+    &__wrapper
+      margin-top: 0
+      padding: 64px calc(50% - 162.5px)
+    &__text
+      padding-top: 32px
+    &__line_bottom
+      width: 47%
+      margin-top: 32px
+      margin-bottom: 50px
+    &__selection
+      font-size: 10px
+      line-height: 12px
+
+  .cart
+    margin-bottom: 96px
+    &__item
+      margin-bottom: 30px
+    &__item_img
+      object-fit: cover
+      height: 188px
+      width: 144px
+    &__item_description
+      padding: 13px 17px
+    &__item_delete
+      right: 17px
+      top: 13px
+      width: 14px
+      height: 14px
+    &__item_tittle
+      padding-right: 0
+      padding-bottom: 25px
+    &__item_info
+      font-size: 14px
+      line-height: 17px
+    &__item_quantity
+      width: 24px
+      height: 17px
+      font-size: 10px
+      line-height: 12px
+    &__input
+      margin-top: 0
+      padding-top: 0
+      justify-content: space-between
+    &__input_link
+      min-width: 175px
+      font-size: 12px
+      line-height: 14px
+      padding: 9px 18px
+      text-align: center
+    &__link
+      font-size: 16px
+      line-height: 19px
+      max-width: 130px
+    &__left
+      padding-bottom: 49px
+    &__right_row
+      flex-direction: column
+    &__right_input
+      width: 100%
+    &__right_box2
+      width: 100%
+
+  .registration
+    flex-direction: column
+    &__left
+      padding-bottom: 40px
+    &__right
+      padding-left: 0
+    &__left_input
+      width: 100%
+
+  .footer
+    &__top
+      padding-bottom: 81px
+    &__center
+      padding-bottom: 109px
+    &__center_left_text
+      max-width: 343px
+      font-size: 18px
+      line-height: 22px
+    &__center_right
+      width: 100%
+      padding-top: 59px
+      text-align: center
+    &__center_right_heading
+      font-size: 24px
+      line-height: 153.2%
+    &__center_right_text
+      font-size: 15px
+    &__bottom
+      padding-bottom: 9px
+      padding-top: 43px
+      flex-wrap: wrap
+      min-height: 143px
+      flex-direction: column-reverse
+    &__center_input
+      width: 100%

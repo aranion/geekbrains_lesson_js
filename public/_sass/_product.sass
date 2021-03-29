@@ -1,0 +1,115 @@
+.wrapper_absolute
+  position: relative
+
+.product
+  width: 100%
+  height: 776px
+  border: 1px solid rgba(234, 234, 234, 1)
+  background: #F7F7F7
+  +centerFlexRow()
+
+  &__left,
+  &__right
+    position: absolute
+    width: 47px
+    height: 47px
+    background: rgba(42, 42, 42, 0.15)
+    +centerFlexRow()
+    cursor: pointer
+
+  &__right
+    right: 0
+
+  &__left
+    left: 0
+
+  &__left_svg,
+  &__right_svg
+    fill: black
+
+  &__left:hover &__left_svg,
+  &__right:hover &__right_svg
+    fill: $colorSelect
+
+  &__box
+    display: flex
+    justify-content: center
+
+.description
+  &__wrapper
+    border: 1px solid $colorLine
+    background: $colorDefault
+    height: 600px
+    width: 100%
+    margin-top: -64px
+    +centerFlex()
+    padding: 64px calc(50% - 290px)
+    position: relative
+    z-index: 5
+
+  &__heading
+    font-weight: 300
+    font-size: 14px
+    line-height: 17px
+    color: $colorSelect
+    text-transform: uppercase
+
+  &__line_top
+    background: $colorSelect
+    width: 63px
+    height: 3px
+    margin-top: 10px
+    margin-bottom: 10px
+
+  &__title
+    font-weight: 300
+    font-size: 18px
+    line-height: 22px
+    color: $colorText
+    text-transform: uppercase
+
+  &__text
+    font-weight: 300
+    font-size: 14px
+    line-height: 17px
+    text-align: center
+    color: #5E5E5E
+    padding-top: 48px
+    padding-bottom: 32px
+
+  &__price
+    font-weight: 300
+    font-size: 24px
+    line-height: 29px
+    color: $colorSelect
+
+  &__line_bottom
+    background-color: $colorLine
+    width: 641px
+    height: 2px
+    margin: 65px 0
+  &__button
+    position: relative
+    padding-left: 57px
+    padding-right: 57px
+    +centerFlexRow()
+    &:hover .description__cart
+      fill: $colorDefault
+
+  &__cart
+    position: absolute
+    left: 20px
+    width: 25px
+    margin-right: 23px
+    fill: $colorSelect
+
+  &__selection
+    display: flex
+    margin-bottom: 48px
+
+.sort__param_span
+  cursor: pointer
+
+.featured_product
+  padding-top: 129px
+  padding-bottom: 129px
