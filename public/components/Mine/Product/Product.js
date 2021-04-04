@@ -18,7 +18,7 @@ Vue.component("Product", {
       goods: [
         {
           id: 1,
-          imgGood: "catalog1.jpg",
+          imgUrl: "catalog1.jpg",
           alt: "популярные товары",
           title: "ELLERY X M'O CAPSULE",
           description: `Known for her sculptural takes on traditional tailoring,
@@ -27,7 +27,7 @@ Vue.component("Product", {
         },
         {
           id: 2,
-          imgGood: "catalog2.jpg",
+          imgUrl: "catalog2.jpg",
           alt: "популярные товары",
           title: "ELLERY X M'O CAPSULE",
           description: `Known for her sculptural takes on traditional tailoring,
@@ -36,7 +36,7 @@ Vue.component("Product", {
         },
         {
           id: 3,
-          imgGood: "catalog3.jpg",
+          imgUrl: "catalog3.jpg",
           alt: "популярные товары",
           title: "ELLERY X M'O CAPSULE",
           description: `Known for her sculptural takes on traditional tailoring,

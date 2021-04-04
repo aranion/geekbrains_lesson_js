@@ -30,7 +30,7 @@ app.post("/api/cart", (req, res) => {
         if (err) res.send('{ "result": 0 }');
         else {
           res.send('{ "result": 1 }');
-          stats(req.body,'post');
+          stats(req.body, "post");
         }
       });
     }
@@ -43,13 +43,14 @@ app.put("/api/cart/:id", (req, res) => {
       res.sendStatus(404, JSON.stringify({ result: 0, text: err }));
     } else {
       const cart = JSON.parse(data);
-      const find = cart.contents.find((el) => el.id_product === +req.params.id);
+      console.log(cart.contents);
+      const find = cart.contents.find((el) => el.id === +req.params.id);
       find.quantity += req.body.quantity;
       fs.writeFile("./server/db/cart.json", JSON.stringify(cart), (err) => {
         if (err) res.send('{"result": 0}');
         else {
           res.send('{"result": 1}');
-          stats(find,'put');
+          stats(find, "put");
         }
       });
     }
@@ -62,15 +63,30 @@ app.delete("/api/cart/:id", (req, res) => {
       res.sendStatus(404, JSON.stringify({ result: 0, text: err }));
     } else {
       const cart = JSON.parse(data);
-      const find = cart.contents.find((el) => el.id_product === +req.params.id);
-      cart.contents.splice(cart.contents.indexOf(find), 1);
-      fs.writeFile("./server/db/cart.json", JSON.stringify(cart), (err) => {
-        if (err) res.send('{ "result": 0 }');
-        else {
-          res.send('{ "result": 1 }');
-          stats(find,'delete');
-        }
-      });
+      if (req.params.id !== "clear") {
+        const find = cart.contents.find(
+          (el) => el.id_product === +req.params.id
+        );
+        cart.contents.splice(cart.contents.indexOf(find), 1);
+        fs.writeFile("./server/db/cart.json", JSON.stringify(cart), (err) => {
+          if (err) res.send('{ "result": 0 }');
+          else {
+            res.send('{ "result": 1 }');
+            stats(find, "delete");
+          }
+        });
+      } else {
+        fs.writeFile(
+          "./server/db/cart.json",
+          JSON.stringify({ contents: [] }),
+          (err) => {
+            if (err) res.send('{ "result": 0 }');
+            else {
+              res.send('{ "result": 1 }');
+            }
+          }
+        );
+      }
     }
   });
 });

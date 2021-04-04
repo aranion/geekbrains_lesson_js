@@ -1,28 +1,7 @@
 Vue.component("Cart", {
   data() {
     return {
-      items: [
-        {
-          id: 1,
-          imgUrl: "catalog3.jpg",
-          alt: "одежда",
-          title: "MANGO PEOPLE T-SHIRT",
-          price: 300,
-          color: "Red",
-          size: "XXl",
-          quantity: 1,
-        },
-        {
-          id: 2,
-          imgUrl: "catalog12.jpg",
-          alt: "одежда",
-          title: "MANGO PEOPLE T-SHIRT",
-          price: 400,
-          color: "Black",
-          size: "Xl",
-          quantity: 1,
-        },
-      ],
+      cartItems: [],
     };
   },
   methods: {
@@ -30,13 +9,66 @@ Vue.component("Cart", {
       this.$root.$refs.Top.$refs.Menu.setCurrentTab(value);
     },
     totalPrice() {
-      return this.items.reduce((sum, el) => (sum += el.price), 0);
+      return this.cartItems.reduce(
+        
+        
+        
+        (sum, el) => (sum += el.price * el.quantity),
+  
+  
+  
+                       0
+      
+      
+      
+      );
+    },
+    addProduct(item) {
+      let find = this.cartItems.find((el) => el.id === item.id);
+      if (find) {
+        this.$parent
+          .putJson(`/api/cart/${find.id}`, { quantity: 1 })
+          .then(find.quantity++);
+      } else {
+        let prod = { ...item, quantity: 1 };
+        this.$parent.postJson("/api/cart/", prod).then((data) => {
+          if (data.result === 1) this.cartItems.push(prod);
+        });
+      }
+    },
+    removeProduct(item) {
+      if (item.quantity > 1) {
+        this.$parent
+          .putJson(`/api/cart/${item.id}`, { quantity: -1 })
+          .then(item.quantity--);
+      } else {
+        this.$parent.deleteJson(`/api/cart/${item.id}`).then((data) => {
+          if (data.result === 1) {
+            this.cartItems.splice(this.cartItems.indexOf(item), 1);
+          }
+        }); 
+      }
+    },
+    deleteProduct(item) {
+      this.$parent.deleteJson(`/api/cart/${item.id}`).then((data) => {
+        if (data.result === 1) {
+          this.cartItems.splice(this.cartItems.indexOf(item), 1);
+        }
+      });
     },
     clearCart() {
-      this.items = [];
+      this.$parent.deleteJson(`/api/cart/clear`).then((data) => {
+        if (data.result === 1) {
+          this.cartItems = [];
+        }
+      });
     },
   },
-  mounted() {},
+  mounted() {
+    this.$parent.getJson("/api/cart/").then((data) => {
+      this.cartItems = [...data.contents];
+    });
+  },
   template: `
     <div>
       <div class="title center">
@@ -45,9 +77,12 @@ Vue.component("Cart", {
       <div class="cart center2">
         <div class="cart__left">
           <CartItem 
-            v-for="item of items"
+            v-for="item of cartItems"
             :key="item.id"
             :item="item"
+            :removeProduct="removeProduct"
+            :addProduct="addProduct"
+            :deleteProduct="deleteProduct"
           ></CartItem>
           <div class="cart__input">
             <a 

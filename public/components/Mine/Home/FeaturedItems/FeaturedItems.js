@@ -4,7 +4,7 @@ Vue.component("FeaturedItems", {
       goods: [
         {
           id: 1,
-          imgGood: "catalog1.jpg",
+          imgUrl: "catalog1.jpg",
           alt: "популярные товары",
           title: "ELLERY X M'O CAPSULE",
           description: `Known for her sculptural takes on traditional tailoring,
@@ -13,7 +13,7 @@ Vue.component("FeaturedItems", {
         },
         {
           id: 2,
-          imgGood: "catalog2.jpg",
+          imgUrl: "catalog2.jpg",
           alt: "популярные товары",
           title: "ELLERY X M'O CAPSULE",
           description: `Known for her sculptural takes on traditional tailoring,
@@ -22,7 +22,7 @@ Vue.component("FeaturedItems", {
         },
         {
           id: 3,
-          imgGood: "catalog3.jpg",
+          imgUrl: "catalog3.jpg",
           alt: "популярные товары",
           title: "ELLERY X M'O CAPSULE",
           description: `Known for her sculptural takes on traditional tailoring,
@@ -31,7 +31,7 @@ Vue.component("FeaturedItems", {
         },
         {
           id: 4,
-          imgGood: "catalog4.jpg",
+          imgUrl: "catalog4.jpg",
           alt: "популярные товары",
           title: "ELLERY X M'O CAPSULE",
           description: `Known for her sculptural takes on traditional tailoring,
@@ -40,7 +40,7 @@ Vue.component("FeaturedItems", {
         },
         {
           id: 5,
-          imgGood: "catalog5.jpg",
+          imgUrl: "catalog5.jpg",
           alt: "популярные товары",
           title: "ELLERY X M'O CAPSULE",
           description: `Known for her sculptural takes on traditional tailoring,
@@ -49,7 +49,7 @@ Vue.component("FeaturedItems", {
         },
         {
           id: 6,
-          imgGood: "catalog6.jpg",
+          imgUrl: "catalog6.jpg",
           alt: "популярные товары",
           title: "ELLERY X M'O CAPSULE",
           description: `Known for her sculptural takes on traditional tailoring,

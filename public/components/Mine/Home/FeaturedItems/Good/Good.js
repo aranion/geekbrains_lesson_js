@@ -1,23 +1,27 @@
 Vue.component("Good", {
-  props: ["data"],
+  props: ["data","addProduct"],
   data() {
     return {
       imgUrlBegin: "./images/catalog/",
       imgCart: "./images/all/cart.svg",
     };
   },
-  methods: {},
+  methods: {
+  },
   mounted() {},
   template: `
       <div class="featured__item">
         <div class="featured__item_img">
-          <a href="./cart.html" class="featured__hover">
+          <a 
+            class="featured__hover"
+            v-on:click="addProduct(data)"
+          >
             <div class="featured__hover_text">
               <img class="featured__hover_cart" :src="imgCart" alt="корзина" />
               <span class="featured__hover_addCart">Add to Cart</span>
             </div>
           </a>
-          <img :src="imgUrlBegin + data.imgGood" :alt="data.alt" />
+          <img :src="imgUrlBegin + data.imgUrl" :alt="data.alt" />
         </div>
         <div class="featured__content">
           <h4 class="featured__content_title">

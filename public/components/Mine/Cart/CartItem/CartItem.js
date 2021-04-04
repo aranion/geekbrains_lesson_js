@@ -1,5 +1,5 @@
 Vue.component("CartItem", {
-  props: ["item"],
+  props: ["item", "removeProduct", "addProduct", "deleteProduct"],
   data() {
     return {};
   },
@@ -24,7 +24,7 @@ Vue.component("CartItem", {
             {{item.title}}
           </a>
         </h4>
-        <a href="#">
+        <a v-on:click="deleteProduct(item)">
           <svg
             class="cart__item_delete"
             width="18"
@@ -55,6 +55,8 @@ Vue.component("CartItem", {
             :value="item.quantity"
             required
           />
+          <span><a v-on:click="addProduct(item)">+</a></span>
+          <span><a v-on:click="removeProduct(item)">-</a></span>
         </span>
       </div>
     </div>
