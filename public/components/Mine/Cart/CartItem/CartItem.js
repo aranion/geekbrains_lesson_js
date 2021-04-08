@@ -1,13 +1,16 @@
 Vue.component("CartItem", {
-  props: ["item", "removeProduct", "addProduct", "deleteProduct"],
+  props: [
+    "item",
+    "removeProduct",
+    "addProduct",
+    "deleteProduct",
+    "setCurrentTab",
+    "setData",
+  ],
   data() {
     return {};
   },
-  methods: {
-    setCurrentTab(value) {
-      this.$root.$refs.Top.$refs.Menu.setCurrentTab(value);
-    },
-  },
+  methods: {},
   template: `
     <div class="cart__item">
       <img
@@ -19,7 +22,9 @@ Vue.component("CartItem", {
         <h4 class="cart__item_tittle">
           <a 
             class="cart__link" 
-            v-on:click="setCurrentTab('product')"
+            v-on:click="
+              setData('product', {...item});
+              setCurrentTab('product')"
           >
             {{item.title}}
           </a>

@@ -166,6 +166,32 @@ button:focus {
   border-radius: 10px;
 }
 
+.header__cart {
+  position: relative;
+}
+
+.header__cart_value {
+  background-color: #c60404;
+  color: white;
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+  position: absolute;
+  right: -25px;
+  top: -25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .header__right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1182,7 +1208,7 @@ button:focus {
 .description__wrapper {
   border: 1px solid #EBEBEB;
   background: #FFF;
-  height: 600px;
+  min-height: 600px;
   width: 100%;
   margin-top: -64px;
   display: -webkit-box;

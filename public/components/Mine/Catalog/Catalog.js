@@ -1,33 +1,16 @@
 Vue.component("Catalog", {
+  props: ["store", "setCurrentTab", "setData"],
   data() {
-    return {
-      products: [],
-      filtered: [],
-      cartItems: [],
-    };
+    return {};
   },
-  methods: {
-    addProduct(item) {
-      let find = this.cartItems.find((el) => el.id === item.id);
-      if (find) {
-        this.$parent
-          .putJson(`/api/cart/${find.id}`, { quantity: 1 })
-          .then(find.quantity++);
-      } else {
-        let prod = { ...item, quantity: 1 };
-``        this.$parent.postJson("/api/cart/", prod).then((data) => {
-          if (data.result === 1) this.cartItems.push(prod);
-        });
-      }
-    },
-  },
+  methods: {},
   mounted() {
-    this.$parent.getJson("/api/products").then((data) => {
-      this.products = [...data];
-      this.filtered = [...data];
+    this.$root.getJson("/api/products").then((data) => {
+      this.setData("products", [...data]);
+      this.setData("filtered", [...data]);
     });
-    this.$parent.getJson("/api/cart/").then((data) => {
-      this.cartItems = [...data.contents];
+    this.$root.getJson("/api/cart/").then((data) => {
+      this.setData("cartItems", [...data.contents]);
     });
   },
   template: `
@@ -37,15 +20,15 @@ Vue.component("Catalog", {
         <nav class="title__nav_box">
           <a 
             class="title__nav_link" 
-            v-on:click="$root.$refs.Top.$refs.Menu.currentTab = 'home'"
+            v-on:click="setCurrentTab('home')"
           > HOME </a>
           <a 
             class="title__nav_link" 
-            v-on:click="$root.$refs.Top.$refs.Menu.currentTab = 'men'"
+            v-on:click="setCurrentTab('men')"
           > MEN </a>
           <a 
             class="title__nav_link title__link_active" 
-            v-on:click="$root.$refs.Top.$refs.Menu.currentTab = 'catalog'"
+            v-on:click="setCurrentTab('catalog')"
           > NEW ARRIVALS </a>
         </nav>
       </section>
@@ -53,10 +36,12 @@ Vue.component("Catalog", {
       <section class="featured featured__catalog center2">
         <div class="featured__items">
           <Good
-            v-for="product of products"
+            v-for="product of store.products"
             :key="product.id"
             :data="product"
-            :addProduct="addProduct"
+            :cartItems="store.cartItems"
+            :setCurrentTab="setCurrentTab"
+            :setData="setData"
           ></Good>
         </div>
         

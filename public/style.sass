@@ -55,7 +55,7 @@ ul
   list-style-type: none
 
 a
-  text-decoration: none 
+  text-decoration: none
   &:hover
     cursor: pointer
 
@@ -128,6 +128,24 @@ button:focus
     border-top: 1px solid #fafafa
     border-bottom: 1px solid #fafafa
     border-radius: 10px
+
+  &__cart
+    position: relative
+  &__cart_value
+    background-color: rgb(198, 4, 4)
+    color: white
+    border-radius: 50%
+    border: 1px solid white
+    width: 30px
+    height: 30px
+    font-size: 15px
+    position: absolute
+    right: -25px
+    top: -25px
+    display: flex
+    justify-content: center
+    align-items: center
+
   &__right
     display: flex
     align-items: center

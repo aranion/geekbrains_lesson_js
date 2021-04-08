@@ -1,4 +1,5 @@
 Vue.component("Menu", {
+  props: ["cartItems", "setCurrentTab"],
   data() {
     return {
       data: [
@@ -37,19 +38,14 @@ Vue.component("Menu", {
         },
       ],
       imgLogo: "./images/all/logo.svg",
-      currentTab: "home",
     };
   },
-  methods: {
-    setCurrentTab(value) {
-      this.currentTab = value;
-    },
-  },
+  methods: {},
   mounted() {},
   template: `
   <div>
     <div class="header__left">
-      <a v-on:click="currentTab = 'home'">
+      <a v-on:click="setCurrentTab('home')">
         <img 
           :src="imgLogo" 
           alt="логотип" 
@@ -102,6 +98,9 @@ Vue.component("Menu", {
         </a>
         <a class="header__cart" v-on:click="setCurrentTab('cart')">
           <img src="./images/all/cart.svg" alt="корзина" />
+          <span class="header__cart_value" v-show='cartItems.length'>
+            {{cartItems.length}}
+          </span>
         </a>
       </div>
     </nav>

@@ -1,4 +1,5 @@
 Vue.component("Top", {
+  props: ["store"],
   data() {
     return {};
   },
@@ -6,7 +7,12 @@ Vue.component("Top", {
   mounted() {},
   template: `
     <header >
-      <Menu ref="Menu" class="header center"></Menu>
+      <Menu 
+        ref="Menu" 
+        class="header center"
+        :cartItems="store.cartItems"
+        :setCurrentTab="$root.setCurrentTab"
+      ></Menu>
     </header>
   `,
 });

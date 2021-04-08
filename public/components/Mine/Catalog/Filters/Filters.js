@@ -57,12 +57,12 @@ Vue.component("Filters", {
               <span class="sort__items_title"> BRAND </span>
             </summary>
             <ul class="sort__ul">
-              <li class="sort__li"><a class="sort__link" href="">Tanks</a></li>
-              <li class="sort__li"><a class="sort__link" href="">Tanks</a></li>
-              <li class="sort__li"><a class="sort__link" href="">Tanks</a></li>
-              <li class="sort__li"><a class="sort__link" href="">Tanks</a></li>
-              <li class="sort__li"><a class="sort__link" href="">Tanks</a></li>
-              <li class="sort__li"><a class="sort__link" href="">Tanks</a></li>
+              <li class="sort__li"><a class="sort__link" href="">Tanks1</a></li>
+              <li class="sort__li"><a class="sort__link" href="">Tanks2</a></li>
+              <li class="sort__li"><a class="sort__link" href="">Tanks3</a></li>
+              <li class="sort__li"><a class="sort__link" href="">Tanks4</a></li>
+              <li class="sort__li"><a class="sort__link" href="">Tanks5</a></li>
+              <li class="sort__li"><a class="sort__link" href="">Tanks6</a></li>
             </ul>
           </details>
           <details>
@@ -71,12 +71,12 @@ Vue.component("Filters", {
               <span class="sort__items_title"> DESIGNER </span>
             </summary>
             <ul class="sort__ul">
-              <li class="sort__li"><a class="sort__link" href="">Tanks</a></li>
-              <li class="sort__li"><a class="sort__link" href="">Tanks</a></li>
-              <li class="sort__li"><a class="sort__link" href="">Tanks</a></li>
-              <li class="sort__li"><a class="sort__link" href="">Tanks</a></li>
-              <li class="sort__li"><a class="sort__link" href="">Tanks</a></li>
-              <li class="sort__li"><a class="sort__link" href="">Tanks</a></li>
+              <li class="sort__li"><a class="sort__link" href="">Tanks1</a></li>
+              <li class="sort__li"><a class="sort__link" href="">Tanks2</a></li>
+              <li class="sort__li"><a class="sort__link" href="">Tanks3</a></li>
+              <li class="sort__li"><a class="sort__link" href="">Tanks4</a></li>
+              <li class="sort__li"><a class="sort__link" href="">Tanks5</a></li>
+              <li class="sort__li"><a class="sort__link" href="">Tanks6</a></li>
             </ul>
           </details>
         </div>

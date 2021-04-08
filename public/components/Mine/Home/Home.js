@@ -1,4 +1,5 @@
 Vue.component("Home", {
+  props: ["store", "setCurrentTab", "setData"],
   data() {
     return {};
   },
@@ -7,8 +8,12 @@ Vue.component("Home", {
   template: `
     <div>
       <Promo></Promo>
-      <Categories></Categories>
-      <FeaturedItems></FeaturedItems>
+      <Categories :setCurrentTab="setCurrentTab"></Categories>
+      <FeaturedItems 
+        :store="store" 
+        :setCurrentTab="setCurrentTab"
+        :setData="setData"
+      ></FeaturedItems>
     </div>
   `,
 });

@@ -1,5 +1,4 @@
 Vue.component("Sort", {
-  props: ["data"],
   data() {
     return {};
   },

@@ -1,4 +1,5 @@
 Vue.component("Categories", {
+  props: ["setCurrentTab"],
   data() {
     return {
       data: [
@@ -39,7 +40,7 @@ Vue.component("Categories", {
             :src="'./images/index/' + item.imgUrl" 
             :alt="item.alt" />
           <div class="catalog__content">
-            <a href="./catalog.html">
+            <a v-on:click="setCurrentTab('catalog')">
               <p class="catalog__text">{{item.text}}</p>
               <h3 class="catalog__heading">{{item.title}}</h3>
             </a>
@@ -49,7 +50,7 @@ Vue.component("Categories", {
       <section class="catalog__item_big center2 catalog__center">
         <img class="catalog__big_img" src="./images/index/catalogBig.jpg" alt="каталог4" />
         <div class="catalog__content">
-          <a href="./catalog.html">
+          <a v-on:click="setCurrentTab('catalog')">
             <p class="catalog__text">LUXIROUS & TRENDY</p>
             <h3 class="catalog__heading">ACCESORIES</h3>
           </a>

@@ -1,50 +1,22 @@
 Vue.component("Product", {
+  props: ["store"],
   data() {
     return {
-      product: {
-        id: 1,
-        category: "WOMEN COLLECTION",
-        slogan: "MOSCHINO CHEAP AND CHIC",
-        description:
-          "Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals.",
-        price: 560,
-        imgSlider: ["product_photo1.jpg"],
-        options: {
-          color: ["black", "white"],
-          size: ["XXL", "XL", "S", "L"],
-          quantity: [1, 2, 3, 4, 5, 6, 7, 8, 9],
-        },
-      },
-      goods: [
-        {
-          id: 1,
-          imgUrl: "catalog1.jpg",
-          alt: "популярные товары",
-          title: "ELLERY X M'O CAPSULE",
-          description: `Known for her sculptural takes on traditional tailoring,
-          Australian arbiter of cool Kym Ellery teams up with Moda Operandi.`,
-          price: 52.0,
-        },
-        {
-          id: 2,
-          imgUrl: "catalog2.jpg",
-          alt: "популярные товары",
-          title: "ELLERY X M'O CAPSULE",
-          description: `Known for her sculptural takes on traditional tailoring,
-          Australian arbiter of cool Kym Ellery teams up with Moda Operandi.`,
-          price: 51.0,
-        },
-        {
-          id: 3,
-          imgUrl: "catalog3.jpg",
-          alt: "популярные товары",
-          title: "ELLERY X M'O CAPSULE",
-          description: `Known for her sculptural takes on traditional tailoring,
-          Australian arbiter of cool Kym Ellery teams up with Moda Operandi.`,
-          price: 53.0,
-        },
-      ],
+      featured: [],
     };
+  },
+  methods: {},
+  mounted() {
+    this.$root.getJson("/api/products").then((data) => {
+      this.$root.setData("products", [...data]);
+
+      for (let i = 0; i < 3; i++) {
+        this.featured.push(this.store.products[i]);
+      }
+    });
+    this.$root.getJson("/api/cart/").then((data) => {
+      this.$root.setData("cartItems", [...data.contents]);
+    });
   },
   template: `
   <div>
@@ -53,16 +25,16 @@ Vue.component("Product", {
       <Navigation></Navigation>
     </section>
     <div class="wrapper_absolute">
-      <Slider :images='product.imgSlider'></Slider>
+      <Slider :images='store.product.imgslider'></Slider>
       <section class="center description__center">
         <div class="description__wrapper">
-          <h3 class="description__heading">{{product.category}}</h3>
+          <h3 class="description__heading">{{store.product.categories}}</h3>
           <div class="description__line_top"></div>
-          <span class="description__title">{{product.slogan}}</span>
-          <p class="description__text">{{product.description}}</p>
-          <span class="description__price">\${{product.price}}</span>
+          <span class="description__title">{{store.product.slogan}}</span>
+          <p class="description__text">{{store.product.fulldescription}}</p>
+          <span class="description__price">\${{store.product.price}}</span>
           <div class="description__line_bottom"></div>
-          <Options :options='product.options'></Options>
+          <Options :options='store.product.options'></Options>
           <a class="button description__button" href="#">
             <svg
               class="description__cart"
@@ -85,9 +57,10 @@ Vue.component("Product", {
     <section class="featured featured_product center2">
       <div class="featured__items">
         <Good
-          v-for="goodItem of goods"
+          v-for="goodItem of featured"
           :key="goodItem.id"
           :data="goodItem"
+          :cartItems="store.cartItems"
         ></Good>
       </div>
     </section>

@@ -1,72 +1,59 @@
 Vue.component("Cart", {
+  props: ["store", "setCurrentTab", "setData"],
   data() {
-    return {
-      cartItems: [],
-    };
+    return {};
   },
   methods: {
-    setCurrentTab(value) {
-      this.$root.$refs.Top.$refs.Menu.setCurrentTab(value);
-    },
     totalPrice() {
-      return this.cartItems.reduce(
-        
-        
-        
+      return this.store.cartItems.reduce(
         (sum, el) => (sum += el.price * el.quantity),
-  
-  
-  
-                       0
-      
-      
-      
+        0
       );
     },
     addProduct(item) {
-      let find = this.cartItems.find((el) => el.id === item.id);
+      let find = this.store.cartItems.find((el) => el.id === item.id);
       if (find) {
-        this.$parent
+        this.$root
           .putJson(`/api/cart/${find.id}`, { quantity: 1 })
           .then(find.quantity++);
       } else {
         let prod = { ...item, quantity: 1 };
-        this.$parent.postJson("/api/cart/", prod).then((data) => {
-          if (data.result === 1) this.cartItems.push(prod);
+        this.$root.postJson("/api/cart/", prod).then((data) => {
+          if (data.result === 1) this.store.cartItems.push(prod);
         });
       }
     },
     removeProduct(item) {
       if (item.quantity > 1) {
-        this.$parent
+        this.$root
           .putJson(`/api/cart/${item.id}`, { quantity: -1 })
           .then(item.quantity--);
       } else {
-        this.$parent.deleteJson(`/api/cart/${item.id}`).then((data) => {
+        this.$root.deleteJson(`/api/cart/${item.id}`).then((data) => {
           if (data.result === 1) {
-            this.cartItems.splice(this.cartItems.indexOf(item), 1);
+            this.store.cartItems.splice(this.store.cartItems.indexOf(item), 1);
           }
-        }); 
+        });
       }
     },
     deleteProduct(item) {
-      this.$parent.deleteJson(`/api/cart/${item.id}`).then((data) => {
+      this.$root.deleteJson(`/api/cart/${item.id}`).then((data) => {
         if (data.result === 1) {
-          this.cartItems.splice(this.cartItems.indexOf(item), 1);
+          this.store.cartItems.splice(this.store.cartItems.indexOf(item), 1);
         }
       });
     },
     clearCart() {
-      this.$parent.deleteJson(`/api/cart/clear`).then((data) => {
+      this.$root.deleteJson(`/api/cart/clear`).then((data) => {
         if (data.result === 1) {
-          this.cartItems = [];
+          this.store.cartItems = [];
         }
       });
     },
   },
   mounted() {
-    this.$parent.getJson("/api/cart/").then((data) => {
-      this.cartItems = [...data.contents];
+    this.$root.getJson("/api/cart/").then((data) => {
+      this.setData("cartItems", [...data.contents]);
     });
   },
   template: `
@@ -77,23 +64,27 @@ Vue.component("Cart", {
       <div class="cart center2">
         <div class="cart__left">
           <CartItem 
-            v-for="item of cartItems"
+            v-for="item of store.cartItems"
             :key="item.id"
             :item="item"
             :removeProduct="removeProduct"
             :addProduct="addProduct"
             :deleteProduct="deleteProduct"
+            :setCurrentTab="setCurrentTab"
+            :setData="setData"
           ></CartItem>
           <div class="cart__input">
             <a 
               class="button cart__input_link" 
               v-on:click="clearCart()"
             >
-                CLEAR SHOPPING CART</a>
+              CLEAR SHOPPING CART
+            </a>
             <a 
               class="button cart__input_link" 
-              v-on:click="setCurrentTab('catalog')">
-                CONTINUE SHOPPING
+              v-on:click="setCurrentTab('catalog')"
+            >
+              CONTINUE SHOPPING
             </a>
           </div>
         </div>
@@ -135,8 +126,8 @@ Vue.component("Cart", {
                 <span class="cart__right_sub-price">\${{ totalPrice()}}</span>
               </div>
               <div class="cart__right_grand">
-                <span>GRAND TOTAL</span
-                ><span class="cart__right_grand-price">\${{ totalPrice()}}</span>
+                <span>GRAND TOTAL</span>
+                <span class="cart__right_grand-price">\${{ totalPrice()}}</span>
               </div>
               <div class="cart__right_line"></div>
               <button class="button cart__right_button2" type="submit">
