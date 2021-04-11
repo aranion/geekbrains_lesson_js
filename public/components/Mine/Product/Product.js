@@ -1,11 +1,26 @@
 Vue.component("Product", {
-  props: ["store"],
+  props: ["store", "setData", "setCurrentTab"],
   data() {
     return {
       featured: [],
+      checked: {color:'black',size:'xl'},
     };
   },
-  methods: {},
+  methods: {
+    addProduct(item, checkedOptions) {
+      let find = this.store.cartItems.find((el) => el.id === item.id);
+      if (find) {
+        this.$root
+          .putJson(`/api/cart/${find.id}`, { quantity: 1 })
+          .then(find.quantity++);
+      } else {
+        let prod = { ...item, checkedOptions, quantity:1 };
+        this.$root.postJson("/api/cart/", prod).then((data) => {
+          if (data.result === 1) this.store.cartItems.push(prod);
+        });
+      }
+    },
+  },
   mounted() {
     this.$root.getJson("/api/products").then((data) => {
       this.$root.setData("products", [...data]);
@@ -34,8 +49,14 @@ Vue.component("Product", {
           <p class="description__text">{{store.product.fulldescription}}</p>
           <span class="description__price">\${{store.product.price}}</span>
           <div class="description__line_bottom"></div>
-          <Options :options='store.product.options'></Options>
-          <a class="button description__button" href="#">
+          <Options 
+            :options='store.product.options'
+            :checked="checked"
+          ></Options>
+          <a 
+            class="button description__button" 
+            v-on:click="addProduct(store.product, checked)"
+          >
             <svg
               class="description__cart"
               width="33"
@@ -61,6 +82,8 @@ Vue.component("Product", {
           :key="goodItem.id"
           :data="goodItem"
           :cartItems="store.cartItems"
+          :setData="setData"
+          :setCurrentTab="setCurrentTab"
         ></Good>
       </div>
     </section>

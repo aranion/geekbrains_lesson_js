@@ -47,8 +47,16 @@ Vue.component("CartItem", {
         <span class="cart__item_info">
           Price: <span class="cart__item_pice"> \${{item.price}}</span>
         </span>
-        <span class="cart__item_info">Color:<span> {{item.color}} </span></span>
-        <span class="cart__item_info">Size:<span> {{item.size}} </span></span>
+        <span class="cart__item_info">Color:
+          <span> 
+            {{item.checkedOptions.color !== undefined ? item.checkedOptions.color : "Default - Black" }} 
+          </span>
+        </span>
+        <span class="cart__item_info">Size:
+          <span> 
+            {{item.checkedOptions.size !== undefined ? item.checkedOptions.size.toUpperCase() : "Default - XXL" }} 
+          </span>
+        </span>
         <span class="cart__item_info">
           Quantity:
           <input

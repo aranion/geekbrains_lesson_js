@@ -4,45 +4,42 @@
     "imgUrl": "catalog1.jpg",
     "alt": "популярные товары",
     "categories": "man",
-    "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
+    "type": "Denim",
+    "title": "Product 1 ",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fullDescription": "Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals.",
-    "fulldescription": "compellingly actualize fully researched processes before proactive outsourcing. progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 521,
     "slogan": "moschino cheap and chic",
     "imgslider": [
       "product_photo1.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedOptions": {}
   },
   {
     "id": 2,
     "imgUrl": "catalog2.jpg",
     "alt": "популярные товары",
     "categories": "woman",
-    "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
+    "type": "Bags",
+    "title": "ELLERY X M'O CAPSULE -Product 2",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fulldescription": "compellingly actualize fully researched processes before proactive outsourcing. compellingly actualize fully researched processes before proactive outsourcing. progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 252,
@@ -50,34 +47,33 @@
     "imgslider": [
       "product_photo2.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedOptions": {}
   },
   {
     "id": 3,
     "imgUrl": "catalog3.jpg",
     "alt": "популярные товары",
     "categories": "man",
-    "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
+    "type": "T-Shirts",
+    "title": "Product 3",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fulldescription": "compellingly actualize fully researched processes before proactive outsourcing.  compellingly actualize fully researched processes before proactive outsourcing. progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 352,
@@ -85,34 +81,33 @@
     "imgslider": [
       "product_photo3.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedOptions": {}
   },
   {
     "id": 4,
     "imgUrl": "catalog4.jpg",
     "alt": "популярные товары",
     "categories": "man",
-    "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
+    "type": "Jackets & Coats",
+    "title": "Product 4 CAPSULE",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fulldescription": "progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 452,
@@ -120,34 +115,33 @@
     "imgslider": [
       "product_photo4.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedOptions": {}
   },
   {
     "id": 5,
     "imgUrl": "catalog5.jpg",
     "alt": "популярные товары",
     "categories": "woman",
-    "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
+    "type": "Polos",
+    "title": "ELLERY X M'O Product 5",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fulldescription": "compellingly actualize fully researched processes compellingly actualize fully researched processes compellingly actualize fully researched processes before proactive outsourcing. progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 555,
@@ -155,34 +149,33 @@
     "imgslider": [
       "product_photo5.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedOptions": {}
   },
   {
     "id": 6,
     "imgUrl": "catalog6.jpg",
     "alt": "популярные товары",
     "categories": "woman",
-    "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
+    "type": "T-Shirts",
+    "title": "Product 6",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fulldescription": "compellingly actualize fully researched processes before proactive outsourcing. progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 600,
@@ -190,34 +183,33 @@
     "imgslider": [
       "product_photo6.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedOptions": {}
   },
   {
     "id": 7,
     "imgUrl": "catalog7.jpg",
     "alt": "популярные товары",
     "categories": "man",
-    "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
+    "type": "Shirts",
+    "title": "Product 7",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fulldescription": "compellingly actualize fully researched processes compellingly actualize fully researched processes before proactive outsourcing. progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 344,
@@ -225,34 +217,33 @@
     "imgslider": [
       "product_photo7.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedOptions": {}
   },
   {
     "id": 8,
     "imgUrl": "catalog8.jpg",
     "alt": "популярные товары",
     "categories": "man",
-    "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
+    "type": "Bags",
+    "title": "ELLERY Product 8",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fulldescription": "compellingly actualize fully researched processes compellingly actualize fully researched processes compellingly actualize fully researched processes compellingly actualize fully researched processes compellingly actualize fully researched processes before proactive outsourcing. progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 888,
@@ -260,34 +251,33 @@
     "imgslider": [
       "product_photo8.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedOptions": {}
   },
   {
     "id": 9,
     "imgUrl": "catalog9.jpg",
     "alt": "популярные товары",
     "categories": "man",
-    "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
+    "type": "T-Shirts",
+    "title": "ELLERY X M'O Product 9",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fulldescription": "compellingly actualize fully researched processes before proactive outsourcing. progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 890,
@@ -295,34 +285,33 @@
     "imgslider": [
       "product_photo9.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedOptions": {}
   },
   {
     "id": 10,
     "imgUrl": "catalog10.jpg",
     "alt": "популярные товары",
     "categories": "man",
-    "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
+    "type": "Denim",
+    "title": "Product 10",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fulldescription": "compellingly actualize fully researched processes compellingly actualize fully researched processes before proactive outsourcing. progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 112,
@@ -330,34 +319,33 @@
     "imgslider": [
       "product_photo10.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedOptions": {}
   },
   {
     "id": 11,
     "imgUrl": "catalog11.jpg",
     "alt": "популярные товары",
     "categories": "man",
-    "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
+    "type": "Accessories",
+    "title": "Product 11 X M'O CAPSULE",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fulldescription": "compellingly actualize fully researched processescompellingly actualize fully researched processescompellingly actualize fully researched processescompellingly actualize fully researched processescompellingly actualize fully researched processes before proactive outsourcing. progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 222,
@@ -365,34 +353,33 @@
     "imgslider": [
       "product_photo11.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedOptions": {}
   },
   {
     "id": 12,
     "imgUrl": "catalog12.jpg",
     "alt": "популярные товары",
     "categories": "kids",
-    "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
+    "type": "Bags",
+    "title": "Product 12 new",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fulldescription": "compellingly actualize fully researched processescompellingly actualize fully researched processescompellingly actualize fully researched processes before proactive outsourcing. progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 520,
@@ -400,34 +387,33 @@
     "imgslider": [
       "product_photo12.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedOptions": {}
   },
   {
     "id": 13,
     "imgUrl": "catalog1.jpg",
     "alt": "популярные товары",
     "categories": "man",
+    "type": "Denim",
     "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fulldescription": "compellingly actualize fully researched processes before proactive outsourcing. progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 52,
@@ -435,34 +421,33 @@
     "imgslider": [
       "product_photo1.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedOptions": {}
   },
   {
     "id": 14,
     "imgUrl": "catalog2.jpg",
     "alt": "популярные товары",
     "categories": "woman",
+    "type": "Polo",
     "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fulldescription": "compellingly actualize fully researched processes before proactive outsourcing. progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 52,
@@ -470,34 +455,33 @@
     "imgslider": [
       "product_photo2.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedOptions": {}
   },
   {
     "id": 15,
     "imgUrl": "catalog3.jpg",
     "alt": "популярные товары",
     "categories": "man",
+    "type": "Accessories",
     "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fulldescription": "compellingly actualize fully researched processes before proactive outsourcing. progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 52,
@@ -505,34 +489,33 @@
     "imgslider": [
       "product_photo3.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedOptions": {}
   },
   {
     "id": 16,
     "imgUrl": "catalog4.jpg",
     "alt": "популярные товары",
     "categories": "man",
+    "type": "T-Shirts",
     "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fulldescription": "compellingly actualize fully researched processes before proactive outsourcing. progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 52,
@@ -540,34 +523,33 @@
     "imgslider": [
       "product_photo4.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedoptions": {}
   },
   {
     "id": 17,
     "imgUrl": "catalog5.jpg",
     "alt": "популярные товары",
     "categories": "woman",
+    "type": "Jackets & Coats",
     "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fulldescription": "compellingly actualize fully researched processes before proactive outsourcing. progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 52,
@@ -575,34 +557,33 @@
     "imgslider": [
       "product_photo5.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedoptions": {}
   },
   {
     "id": 18,
     "imgUrl": "catalog6.jpg",
     "alt": "популярные товары",
     "categories": "woman",
+    "type": "Shirts",
     "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fulldescription": "compellingly actualize fully researched processes before proactive outsourcing. progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 52,
@@ -610,34 +591,33 @@
     "imgslider": [
       "product_photo6.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedoptions": {}
   },
   {
     "id": 19,
     "imgUrl": "catalog7.jpg",
     "alt": "популярные товары",
     "categories": "man",
+    "type": "Bags",
     "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fulldescription": "compellingly actualize fully researched processes before proactive outsourcing. progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 52,
@@ -645,34 +625,33 @@
     "imgslider": [
       "product_photo7.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedoptions": {}
   },
   {
     "id": 20,
     "imgUrl": "catalog8.jpg",
     "alt": "популярные товары",
     "categories": "man",
+    "type": "Denim",
     "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fulldescription": "compellingly actualize fully researched processes before proactive outsourcing. progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 52,
@@ -680,34 +659,33 @@
     "imgslider": [
       "product_photo8.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedoptions": {}
   },
   {
     "id": 21,
     "imgUrl": "catalog9.jpg",
     "alt": "популярные товары",
     "categories": "man",
+    "type": "Denim",
     "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fulldescription": "compellingly actualize fully researched processes before proactive outsourcing. progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 52,
@@ -715,34 +693,33 @@
     "imgslider": [
       "product_photo9.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedoptions": {}
   },
   {
     "id": 22,
     "imgUrl": "catalog10.jpg",
     "alt": "популярные товары",
     "categories": "man",
+    "type": "T-Shirts",
     "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fulldescription": "compellingly actualize fully researched processes before proactive outsourcing. progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 52,
@@ -750,34 +727,33 @@
     "imgslider": [
       "product_photo10.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedoptions": {}
   },
   {
     "id": 23,
     "imgUrl": "catalog11.jpg",
     "alt": "популярные товары",
     "categories": "man",
+    "type": "T-Shirts",
     "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fulldescription": "compellingly actualize fully researched processes before proactive outsourcing. progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 52,
@@ -785,34 +761,33 @@
     "imgslider": [
       "product_photo11.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedoptions": {}
   },
   {
     "id": 24,
     "imgUrl": "catalog12.jpg",
     "alt": "популярные товары",
     "categories": "kids",
+    "type": "Shirts",
     "title": "ELLERY X M'O CAPSULE",
-    "color": "Random",
-    "size": "XL",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "fulldescription": "compellingly actualize fully researched processes before proactive outsourcing. progressively syndicate collaborative architectures before cutting-edge services. completely visualize parallel core competencies rather than exceptional portals.",
     "price": 52,
@@ -820,24 +795,24 @@
     "imgslider": [
       "product_photo12.jpg"
     ],
-    "options": {
-      "color": [
-        "black",
-        "white"
-      ],
-      "size": [
-        "xxl",
-        "xl",
-        "s",
-        "l"
-      ],
-      "quantity": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+    "options": [
+      {
+        "label": "color",
+        "value": [
+          "black",
+          "white"
+        ]
+      },
+      {
+        "label": "size",
+        "value": [
+          "xxl",
+          "xl",
+          "s",
+          "l"
+        ]
+      }
+    ],
+    "checkedoptions": {}
   }
-  ]
+]

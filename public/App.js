@@ -6,7 +6,6 @@ const app = new Vue({
       products: [],
       filtered: [],
       cartItems: [],
-      cartItemsLength: 0,
       currentTab: "home",
     },
   },
@@ -67,13 +66,6 @@ const app = new Vue({
   // },
   // created() {
   //   console.log("created");
-  //   this.getJson(API + this.url.catalog).then((data) => {
-  //     this.products = [...data];
-  //     this.filtered = [...data];
-  //   });
-  //   this.getJson(API + this.url.cart).then((data) => {
-  //     this.cartProducts = [...data.contents];
-  //   });
   // },
   // beforeMount() {
   //   console.log("beforeMount");

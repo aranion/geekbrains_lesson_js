@@ -36,7 +36,7 @@ Vue.component("Catalog", {
       <section class="featured featured__catalog center2">
         <div class="featured__items">
           <Good
-            v-for="product of store.products"
+            v-for="product of store.filtered"
             :key="product.id"
             :data="product"
             :cartItems="store.cartItems"

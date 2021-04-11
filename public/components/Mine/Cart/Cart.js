@@ -51,11 +51,7 @@ Vue.component("Cart", {
       });
     },
   },
-  mounted() {
-    this.$root.getJson("/api/cart/").then((data) => {
-      this.setData("cartItems", [...data.contents]);
-    });
-  },
+  mounted() {},
   template: `
     <div>
       <div class="title center">

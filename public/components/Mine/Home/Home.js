@@ -8,7 +8,10 @@ Vue.component("Home", {
   template: `
     <div>
       <Promo></Promo>
-      <Categories :setCurrentTab="setCurrentTab"></Categories>
+      <Categories 
+        :setCurrentTab="setCurrentTab" 
+        :store="store"
+      ></Categories>
       <FeaturedItems 
         :store="store" 
         :setCurrentTab="setCurrentTab"

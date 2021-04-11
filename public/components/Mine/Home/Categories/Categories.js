@@ -1,5 +1,5 @@
 Vue.component("Categories", {
-  props: ["setCurrentTab"],
+  props: ["setCurrentTab", "store"],
   data() {
     return {
       data: [
@@ -7,27 +7,34 @@ Vue.component("Categories", {
           id: 1,
           imgUrl: "catalog1.jpg",
           alt: "каталог1",
-          title: "FOR WOMEN",
+          title: "woman",
           text: "30% OFF",
         },
         {
           id: 2,
           imgUrl: "catalog2.jpg",
           alt: "каталог2",
-          title: "FOR MEN",
+          title: "man",
           text: "HOT DEAL",
         },
         {
           id: 3,
           imgUrl: "catalog3.jpg",
           alt: "каталог3",
-          title: "FOR KIDS",
+          title: "kids",
           text: "NEW ARRIVALS",
         },
       ],
     };
   },
-  methods: {},
+  methods: {
+    filterMenu(value, categories) {
+      this.store.filtered = this.store.products.filter(
+        (product) => product[categories] === value
+      );
+      this.setCurrentTab("catalog");
+    },
+  },
   mounted() {},
   template: `
     <div>
@@ -40,9 +47,9 @@ Vue.component("Categories", {
             :src="'./images/index/' + item.imgUrl" 
             :alt="item.alt" />
           <div class="catalog__content">
-            <a v-on:click="setCurrentTab('catalog')">
+            <a v-on:click="filterMenu(item.title, 'categories')">
               <p class="catalog__text">{{item.text}}</p>
-              <h3 class="catalog__heading">{{item.title}}</h3>
+              <h3 class="catalog__heading">{{'FOR ' + item.title}}</h3>
             </a>
           </div>
         </div>
@@ -50,7 +57,7 @@ Vue.component("Categories", {
       <section class="catalog__item_big center2 catalog__center">
         <img class="catalog__big_img" src="./images/index/catalogBig.jpg" alt="каталог4" />
         <div class="catalog__content">
-          <a v-on:click="setCurrentTab('catalog')">
+          <a v-on:click="filterMenu('Accessories', 'type')">
             <p class="catalog__text">LUXIROUS & TRENDY</p>
             <h3 class="catalog__heading">ACCESORIES</h3>
           </a>

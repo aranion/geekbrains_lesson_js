@@ -10,8 +10,9 @@ Vue.component("Top", {
       <Menu 
         ref="Menu" 
         class="header center"
-        :cartItems="store.cartItems"
+        :store="store"
         :setCurrentTab="$root.setCurrentTab"
+        :setData="$root.setData"
       ></Menu>
     </header>
   `,

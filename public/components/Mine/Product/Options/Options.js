@@ -1,18 +1,33 @@
 Vue.component("Options", {
-  props: ["options"],
+  props: ["options", "checked"],
   data() {
-    return {
-      optionName: ["color", "size", "quantity"],
-    };
+    return {};
+  },
+  methods: {
+    // onChange(e) {
+    //   console.log(this.$emit('input'));
+    //   this.$emit('input', this.checkedP)
+    // }
+  },
+  computed: {
+    // checked: {
+    //   get() {
+    //     return this.value;
+    //   },
+    //   set(val) {
+    //     this.checkedP = val;
+    //   },
+    // },
   },
   template: `
     <div class="description__selection">
       <details 
         class="sort__open"
-        v-for="name of optionName"
+        v-for="optionItem of options"
       >
         <summary class="sort__param_span">
-          {{ name !== 'quantity' ? ('CHOOSE ' + name).toUpperCase() : name.toUpperCase()}}
+          {{ ('CHOOSE ' + optionItem.label).toUpperCase()}}
+          : {{ checked[optionItem.label] }}
           <svg
             class="sort__param_svg"
             width="11"
@@ -27,18 +42,45 @@ Vue.component("Options", {
             />
           </svg>
         </summary>
-        <div class="sort__check sort__trending">
-          <label v-for="option of options[name]">
-            <input
-              class="sort__check_input"
-              type="checkbox"
-              name="trending"
-            />
-            {{option}}
-          </label>
+        <div class="sort__check sort__trending" >
+          <app-checkbox
+            v-for="item in optionItem.value"
+            :key="optionItem.value + item"
+            :name="optionItem.label"
+            :value="item"
+            v-model="checked[optionItem.label]">
+            {{ item }}
+          </app-checkbox>
         </div>
       </details>
-      
     </div>
   `,
+});
+
+Vue.component("app-checkbox", {
+  model: {
+    prop: "checked",
+    event: "change",
+  },
+  props: ["name", "value", "checked"],
+  template: `
+    <label>
+      <input 
+        type="radio" 
+        :name="name" 
+        :value="value" 
+        v-model="model" 
+      >
+      <slot></slot>
+    </label>`,
+  computed: {
+    model: {
+      get() {
+        return this.checked;
+      },
+      set(val) {
+        this.$emit("change", val);
+      },
+    },
+  },
 });

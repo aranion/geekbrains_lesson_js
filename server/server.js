@@ -43,7 +43,6 @@ app.put("/api/cart/:id", (req, res) => {
       res.sendStatus(404, JSON.stringify({ result: 0, text: err }));
     } else {
       const cart = JSON.parse(data);
-      console.log(cart.contents);
       const find = cart.contents.find((el) => el.id === +req.params.id);
       find.quantity += req.body.quantity;
       fs.writeFile("./server/db/cart.json", JSON.stringify(cart), (err) => {
