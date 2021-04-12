@@ -7,7 +7,6 @@ Vue.component("Catalog", {
   mounted() {
     this.$root.getJson("/api/products").then((data) => {
       this.setData("products", [...data]);
-      this.setData("filtered", [...data]);
     });
     this.$root.getJson("/api/cart/").then((data) => {
       this.setData("cartItems", [...data.contents]);

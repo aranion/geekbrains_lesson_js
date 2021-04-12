@@ -61,6 +61,11 @@ const app = new Vue({
       else this.store[name] = { ...item };
     },
   },
+  mounted() {
+    this.$root.getJson("/api/products").then((data) => {
+      this.setData("filtered", [...data]);
+    });
+  },
   // beforeCreate() {
   //   console.log("beforeCreate");
   // },
