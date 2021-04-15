@@ -1,4 +1,5 @@
-Vue.component("Registration", {
+// Vue.component("Registration", {
+const Registration = {
   data() {
     return {};
   },
@@ -127,4 +128,6 @@ Vue.component("Registration", {
       </div>  
     </div>
   `,
-});
+};
+// );
+export default Registration;

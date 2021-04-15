@@ -1,4 +1,5 @@
-Vue.component("Slider", {
+// Vue.component("Slider", {
+const Slider = {
   props: ["images"],
   data() {
     return {};
@@ -44,4 +45,6 @@ Vue.component("Slider", {
       </div>
     </div>
   `,
-});
+};
+// );
+export default Slider;

@@ -1,5 +1,15 @@
-Vue.component("Home", {
+import Promo from "./Promo/Promo";
+import FeaturedItems from "./FeaturedItems/FeaturedItems";
+import Categories from "./Categories/Categories";
+
+// Vue.component("Home", {
+const Home = {
   props: ["store", "setCurrentTab", "setData"],
+  components: {
+    Promo,
+    Categories,
+    FeaturedItems,
+  },
   data() {
     return {};
   },
@@ -19,4 +29,6 @@ Vue.component("Home", {
       ></FeaturedItems>
     </div>
   `,
-});
+};
+// );
+export default Home;

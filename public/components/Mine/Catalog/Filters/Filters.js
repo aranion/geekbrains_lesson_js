@@ -1,4 +1,10 @@
-Vue.component("Filters", {
+import Sort from "./Sort/Sort";
+
+// Vue.component("Filters", {
+const Filters = {
+  components: {
+    Sort,
+  },
   data() {
     return {};
   },
@@ -84,4 +90,7 @@ Vue.component("Filters", {
       <Sort></Sort>
     </div>
   `,
-});
+};
+// );
+
+export default Filters;

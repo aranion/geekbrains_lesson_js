@@ -1,13 +1,7 @@
 @import ./_sass/vars
 @import ./_sass/mixins
 
-@font-face
-  font-family: "Lato"
-  src: url('./fonts/Lato-Light.ttf') format('truetype')
-
-@font-face
-  font-family: "LatoBold"
-  src: url('./fonts/Lato-Black.ttf') format('truetype')
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;900&display=swap')
 
 @-webkit-keyframes rotate-hor-center
   0%
@@ -187,7 +181,8 @@ button:focus
     top: 16px
 
   &__menu_title
-    font-family: "LatoBold"
+    font-family: "Lato"
+    font-weight: bold
     font-weight: bold
     padding-bottom: 24px
     text-transform: uppercase
@@ -361,6 +356,7 @@ button:focus
   min-height: 150px
   +centerFlex()
   &title
+    font-family: "Lato"
     font-size: 30px
 
 @import ./_sass/index

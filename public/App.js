@@ -1,5 +1,14 @@
+import Top from "./components/Top/Top";
+import Mine from "./components/Mine/Mine";
+import Bottom from "./components/Footer/Footer";
+
 const app = new Vue({
   el: "#app",
+  components: {
+    Top,
+    Mine,
+    Bottom
+    },
   data: {
     store: {
       product: [],
@@ -91,3 +100,5 @@ const app = new Vue({
   //   console.log("beforeDestroy");
   // },
 });
+
+export default app;

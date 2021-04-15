@@ -1,4 +1,5 @@
-Vue.component("Good", {
+// Vue.component("Good", {
+const Good = {
   props: ["data", "cartItems", "setCurrentTab", "setData"],
   data() {
     return {
@@ -57,4 +58,6 @@ Vue.component("Good", {
         </div>
       </div>
   `,
-});
+};
+// );
+export default Good;

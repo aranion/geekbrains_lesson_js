@@ -1,4 +1,5 @@
-Vue.component("CartMiniItem", {
+// Vue.component("CartMiniItem", {
+const CartMiniItem = {
   props: ["cartItem", "removeProduct", "addProduct"],
   data() {
     return {};
@@ -9,8 +10,8 @@ Vue.component("CartMiniItem", {
               <img :src="'./images/catalog/' + cartItem.imgUrl" alt="Some image">
               <div class="cart-item__desc">
                   <a href="#" class="cart-item__title">{{cartItem.title}}</a>
-                  <p class="cart-item__quantity">Количество: {{cartItem.quantity}}</p>
-                  <p class="cart-item__single-price">{{cartItem.price}}₽ за ед.</p>
+                  <p class="cart-item__quantity">Quantity: {{cartItem.quantity}}</p>
+                  <p class="cart-item__single-price">{{cartItem.price}}₽ per unit</p>
               </div>
           </div>
           <div class="cart-block__right">
@@ -22,4 +23,6 @@ Vue.component("CartMiniItem", {
           </div>
         </div>
   `,
-});
+};;
+// );
+export default CartMiniItem;

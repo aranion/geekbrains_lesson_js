@@ -1,24 +1,11 @@
-Vue.component("Options", {
+// Vue.component("Options", {
+const Options = {
   props: ["options", "checked"],
   data() {
     return {};
   },
-  methods: {
-    // onChange(e) {
-    //   console.log(this.$emit('input'));
-    //   this.$emit('input', this.checkedP)
-    // }
-  },
-  computed: {
-    // checked: {
-    //   get() {
-    //     return this.value;
-    //   },
-    //   set(val) {
-    //     this.checkedP = val;
-    //   },
-    // },
-  },
+  methods: {},
+  computed: {},
   template: `
     <div class="description__selection">
       <details 
@@ -55,7 +42,9 @@ Vue.component("Options", {
       </details>
     </div>
   `,
-});
+};
+// );
+export default Options;
 
 Vue.component("app-checkbox", {
   model: {

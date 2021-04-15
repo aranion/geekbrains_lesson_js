@@ -1,9 +1,21 @@
-Vue.component("Product", {
+import Navigation from "./Navigation/Navigation";
+import Options from "./Options/Options";
+import Slider from "./Slider/Slider";
+import Good from "../Home/FeaturedItems/Good/Good";
+
+// Vue.component("Product", {
+const Product = {
   props: ["store", "setData", "setCurrentTab"],
+  components: {
+    Navigation,
+    Options,
+    Slider,
+    Good,
+  },
   data() {
     return {
       featured: [],
-      checked: {color:'black',size:'xl'},
+      checked: { color: "black", size: "xl" },
     };
   },
   methods: {
@@ -14,7 +26,7 @@ Vue.component("Product", {
           .putJson(`/api/cart/${find.id}`, { quantity: 1 })
           .then(find.quantity++);
       } else {
-        let prod = { ...item, checkedOptions, quantity:1 };
+        let prod = { ...item, checkedOptions, quantity: 1 };
         this.$root.postJson("/api/cart/", prod).then((data) => {
           if (data.result === 1) this.store.cartItems.push(prod);
         });
@@ -24,7 +36,6 @@ Vue.component("Product", {
   mounted() {
     this.$root.getJson("/api/products").then((data) => {
       this.$root.setData("products", [...data]);
-
       for (let i = 0; i < 3; i++) {
         this.featured.push(this.store.products[i]);
       }
@@ -37,7 +48,10 @@ Vue.component("Product", {
   <div>
     <section class="title center">
       <h2 class="title__text">NEW ARRIVALS</h2>
-      <Navigation></Navigation>
+      <Navigation
+        :setCurrentTab="setCurrentTab"
+        :store="store"
+      ></Navigation>
     </section>
     <div class="wrapper_absolute">
       <Slider :images='store.product.imgslider'></Slider>
@@ -89,4 +103,6 @@ Vue.component("Product", {
     </section>
   </div>
   `,
-});
+};
+// );
+export default Product;

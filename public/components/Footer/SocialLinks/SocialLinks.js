@@ -1,4 +1,5 @@
-Vue.component("SocialLinks", {
+// Vue.component("SocialLinks", {
+const SocialLinks = {
   data() {
     return {
       data: [
@@ -61,4 +62,6 @@ Vue.component("SocialLinks", {
       </div>
     </div>
   `,
-});
+};;
+// );
+export default SocialLinks;

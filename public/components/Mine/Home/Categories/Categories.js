@@ -1,4 +1,5 @@
-Vue.component("Categories", {
+// Vue.component("Categories", {
+const Categories = {
   props: ["setCurrentTab", "store"],
   data() {
     return {
@@ -65,4 +66,6 @@ Vue.component("Categories", {
       </section>
     </div>
   `,
-});
+};
+// );
+export default Categories;

@@ -1,5 +1,13 @@
-Vue.component("Menu", {
+import Search from "./Search/Search";
+import CartMini from "./CartMini/CartMini";
+
+// Vue.component("Menu", {
+const Menu = {
   props: ["store", "setCurrentTab", "setData"],
+  components: {
+    Search,
+    CartMini,
+  },
   data() {
     return {
       data: [
@@ -47,16 +55,16 @@ Vue.component("Menu", {
       this[value] = !this[value];
     },
     filterMenu(obj, obj2) {
-      this.store.filtered = this.store.products.filter(
-        (product) => {
-          if (obj2 === undefined) {
-            return product[obj.name] === obj.value
-          } else {
-            return product[obj.name] === obj.value && product[obj2.name] === obj2.value 
-          }
+      this.store.filtered = this.store.products.filter((product) => {
+        if (obj2 === undefined) {
+          return product[obj.name] === obj.value;
+        } else {
+          return (
+            product[obj.name] === obj.value && product[obj2.name] === obj2.value
+          );
         }
-      );
-      this.setCurrentTab('catalog');
+      });
+      this.setCurrentTab("catalog");
     },
   },
   mounted() {},
@@ -144,4 +152,7 @@ Vue.component("Menu", {
     </nav>
   </div>
   `,
-});
+};
+// );
+
+export default Menu;

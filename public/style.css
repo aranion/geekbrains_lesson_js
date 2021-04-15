@@ -1,14 +1,5 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "Lato";
-  src: url("./fonts/Lato-Light.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "LatoBold";
-  src: url("./fonts/Lato-Black.ttf") format("truetype");
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;900&display=swap");
 @-webkit-keyframes rotate-hor-center {
   0% {
   }
@@ -262,7 +253,8 @@ button:focus {
 }
 
 .header__menu_title {
-  font-family: "LatoBold";
+  font-family: "Lato";
+  font-weight: bold;
   font-weight: bold;
   padding-bottom: 24px;
   text-transform: uppercase;
@@ -579,6 +571,7 @@ button:focus {
 }
 
 .notfoundtitle {
+  font-family: "Lato";
   font-size: 30px;
 }
 
@@ -618,7 +611,8 @@ button:focus {
 }
 
 .promo__title {
-  font-family: "LatoBold";
+  font-family: "Lato";
+  font-weight: bold;
   font-size: 48px;
   line-height: 58px;
 }
@@ -708,7 +702,8 @@ button:focus {
 
 .catalog__heading {
   color: #F16D7F;
-  font-family: "LatoBold";
+  font-family: "Lato";
+  font-weight: bold;
   font-size: 17px;
 }
 
@@ -798,7 +793,8 @@ button:focus {
 }
 
 .title__link_active {
-  font-family: "LatoBold";
+  font-family: "Lato";
+  font-weight: bold;
   color: #F16D7F;
 }
 
@@ -1639,7 +1635,8 @@ button:focus {
 
 .cart-block__summ-price {
   font-size: 18px;
-  font-family: "LatoBold";
+  font-family: "Lato";
+  font-weight: bold;
   color: #222222;
   text-align: right;
 }
@@ -1712,7 +1709,8 @@ button:focus {
 
 .cart-item__title {
   font-size: 10px;
-  font-family: "LatoBold";
+  font-family: "Lato";
+  font-weight: bold;
 }
 
 .cart-item__single-price {
@@ -1722,7 +1720,8 @@ button:focus {
 
 .cart-item__price {
   margin-left: 30px;
-  font-family: "LatoBold";
+  font-family: "Lato";
+  font-weight: bold;
   color: #222222;
 }
 

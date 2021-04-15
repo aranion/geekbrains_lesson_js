@@ -1,5 +1,11 @@
-Vue.component("FeaturedItems", {
+import Good from "./Good/Good";
+
+// Vue.component("FeaturedItems", {
+const FeaturedItems = {
   props: ["store", "setCurrentTab", "setData"],
+  components: {
+    Good,
+  },
   data() {
     return {
       featured: [],
@@ -44,4 +50,6 @@ Vue.component("FeaturedItems", {
         </div>
       </section>
   `,
-});
+};
+// );
+export default FeaturedItems;

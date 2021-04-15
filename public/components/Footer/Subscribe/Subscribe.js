@@ -1,4 +1,5 @@
-Vue.component("Subscribe", {
+// Vue.component("Subscribe", {
+const Subscribe = {
   data() {
     return {};
   },
@@ -26,4 +27,6 @@ Vue.component("Subscribe", {
       </div>
     </div>
     `,
-});
+};;
+// );
+export default Subscribe;

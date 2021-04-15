@@ -1,5 +1,11 @@
-Vue.component("CartMini", {
+import CartMiniItem from "./CartMiniItem/CartMiniItem";
+
+// Vue.component("CartMini", {
+const CartMini = {
   props: ["cartItems", "setCurrentTab", "setData", "toggleVisible"],
+  components: {
+    CartMiniItem,
+  },
   data() {
     return {
       showCart: false,
@@ -67,4 +73,6 @@ Vue.component("CartMini", {
       </div>
     </div>
   `,
-});
+};
+// );
+export default CartMini;

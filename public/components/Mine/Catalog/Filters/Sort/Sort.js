@@ -1,4 +1,5 @@
-Vue.component("Sort", {
+// Vue.component("Sort", {
+const Sort = {
   data() {
     return {};
   },
@@ -143,4 +144,7 @@ Vue.component("Sort", {
       </details>
     </div>
   `,
-});
+};
+// );
+
+export default Sort;

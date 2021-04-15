@@ -1,4 +1,6 @@
-Vue.component("Services", {
+// Vue.component("Services", {
+const Services = {
+  props: ["setCurrentTab"],
   data() {
     return {
       data: [
@@ -7,7 +9,7 @@ Vue.component("Services", {
           imgUrl: "footer_icon.png",
           alt: "машина",
           titleLink: "Free Delivery",
-          link: "#",
+          link: "notfound",
           text: ` Worldwide delivery on all. Authorit tively morph next-generation
           innov tion with extensive models.`,
         },
@@ -16,7 +18,7 @@ Vue.component("Services", {
           imgUrl: "footer_icon2.png",
           alt: "скидка",
           titleLink: "Sales & discounts",
-          link: "#",
+          link: "notfound",
           text: ` Worldwide delivery on all. Authorit tively morph next-generation
           innov tion with extensive models.`,
         },
@@ -25,7 +27,7 @@ Vue.component("Services", {
           imgUrl: "footer_icon3.png",
           alt: "корона",
           titleLink: "Quality assurance",
-          link: "#",
+          link: "notfound",
           text: ` Worldwide delivery on all. Authorit tively morph next-generation
           innov tion with extensive models.`,
         },
@@ -46,7 +48,7 @@ Vue.component("Services", {
       />
       <h5 class="footer__top_title">
         <a class="footer__top_title_a" 
-          v-on:click="$root.$refs.Top.$refs.Menu.currentTab = 'notfound'"
+          v-on:click="setCurrentTab(item.link)"
         >{{item.titleLink}}</a>
       </h5>
       <p class="footer__top_text">
@@ -55,4 +57,6 @@ Vue.component("Services", {
     </div>
   </div>
   `,
-});
+};
+// );
+export default Services;

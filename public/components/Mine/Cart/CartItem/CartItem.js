@@ -1,4 +1,5 @@
-Vue.component("CartItem", {
+// Vue.component("CartItem", {
+const CartItem = {
   props: [
     "item",
     "removeProduct",
@@ -74,4 +75,6 @@ Vue.component("CartItem", {
       </div>
     </div>
   `,
-});
+};
+// );
+export default CartItem;

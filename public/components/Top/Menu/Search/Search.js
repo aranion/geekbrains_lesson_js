@@ -1,5 +1,6 @@
-Vue.component("Search", {
-  props: ["store","setCurrentTab"],
+// Vue.component("Search", {
+const Search = {
+  props: ["store", "setCurrentTab"],
   data() {
     return {
       imgSearch: "./images/all/search.svg",
@@ -9,8 +10,8 @@ Vue.component("Search", {
   methods: {
     filterGoods() {
       const regexp = new RegExp(this.searchLine, "i");
-      this.store.filtered = this.store.products.filter(
-        (product) => regexp.test(product.title)
+      this.store.filtered = this.store.products.filter((product) =>
+        regexp.test(product.title)
       );
     },
   },
@@ -28,4 +29,7 @@ Vue.component("Search", {
         </button>
       </form>   
   `,
-});
+};
+// );
+
+export default Search;

@@ -1,5 +1,15 @@
-Vue.component("Catalog", {
+import Filters from "./Filters/Filters";
+import Good from "../Home/FeaturedItems/Good/Good";
+import Navigation from "../Product/Navigation/Navigation";
+
+// Vue.component("Catalog", {
+const Catalog = {
   props: ["store", "setCurrentTab", "setData"],
+  components: {
+    Filters,
+    Good,
+    Navigation,
+  },
   data() {
     return {};
   },
@@ -23,7 +33,7 @@ Vue.component("Catalog", {
           > HOME </a>
           <a 
             class="title__nav_link" 
-            v-on:click="setCurrentTab('men')"
+            v-on:click="setCurrentTab('catalog')"
           > MEN </a>
           <a 
             class="title__nav_link title__link_active" 
@@ -91,4 +101,6 @@ Vue.component("Catalog", {
       </section>
     </div>
   `,
-});
+};
+// );
+export default Catalog;

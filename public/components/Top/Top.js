@@ -1,5 +1,11 @@
-Vue.component("Top", {
+import Menu from "./Menu/Menu";
+
+// Vue.component("Top", {
+const Top = {
   props: ["store"],
+  components: {
+    Menu,
+  },
   data() {
     return {};
   },
@@ -16,4 +22,7 @@ Vue.component("Top", {
       ></Menu>
     </header>
   `,
-});
+};
+// );
+
+export default Top;

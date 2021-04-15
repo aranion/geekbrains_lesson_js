@@ -1,5 +1,11 @@
-Vue.component("Cart", {
+import CartItem from "./CartItem/CartItem";
+
+// Vue.component("Cart", {
+const Cart = {
   props: ["store", "setCurrentTab", "setData"],
+  components: {
+    CartItem,
+  },
   data() {
     return {};
   },
@@ -135,4 +141,6 @@ Vue.component("Cart", {
       </div>
     </div>
   `,
-});
+};
+// );
+export default Cart;

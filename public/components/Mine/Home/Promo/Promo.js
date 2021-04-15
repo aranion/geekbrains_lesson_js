@@ -1,4 +1,5 @@
-Vue.component("Promo", {
+// Vue.component("Promo", {
+const Promo = {
   data() {
     return {};
   },
@@ -20,4 +21,6 @@ Vue.component("Promo", {
       </div>
     </section>
   `,
-});
+};
+// );
+export default Promo;
