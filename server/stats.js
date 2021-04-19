@@ -1,8 +1,9 @@
 const moment = require("moment");
 const fs = require("fs");
+const path = require("path");
 
 const stats = (prod_name, action) => {
-  fs.readFile("./server/db/stats.json", "utf-8", (err, data) => {
+  fs.readFile(path.join(__dirname, "db/stats.json"), "utf-8", (err, data) => {
     if (err) {
       console.log(err);
     } else {
@@ -13,7 +14,7 @@ const stats = (prod_name, action) => {
         action,
       });
       fs.writeFile(
-        "./server/db/stats.json",
+        path.join(__dirname, "db/stats.json"),
         JSON.stringify(stat, null, 4),
         (err) => {
           if (err) {
