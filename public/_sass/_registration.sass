@@ -1,0 +1,116 @@
+@-webkit-keyframes scale-up-hor-left
+  0%
+  -webkit-transform: scaleX(0.4)
+  transform: scaleX(0.4)
+  -webkit-transform-origin: 0% 0%
+  transform-origin: 0% 0%
+
+  100%
+  -webkit-transform: scaleX(1)
+  transform: scaleX(1)
+  -webkit-transform-origin: 0% 0%
+  transform-origin: 0% 0%
+@keyframes scale-up-hor-left
+  0%
+    -webkit-transform: scaleX(0.4)
+    transform: scaleX(0.4)
+    -webkit-transform-origin: 0% 0%
+    transform-origin: 0% 0%
+
+  100%
+    -webkit-transform: scaleX(1)
+    transform: scaleX(1)
+    -webkit-transform-origin: 0% 0%
+    transform-origin: 0% 0%
+
+.registration
+  display: flex
+  justify-content: space-between
+  padding-top: 65px
+  padding-bottom: 100px
+
+  &__left_title
+    font-weight: 300
+    font-size: 16px
+    line-height: 19px
+    color: $colorHeading
+
+  &__left
+    display: flex
+    flex-direction: column
+
+  &__left_input
+    width: 360px
+    padding: 15px
+    margin-top: 20px
+    border: 1px solid $colorBorderInput
+    font-weight: 300
+    font-size: 13px
+    line-height: 16px
+    color: $colorText
+    -webkit-animation: scale-up-hor-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both
+    animation: scale-up-hor-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both
+
+  &__left_group-radio
+    display: flex
+    padding-top: 20px
+    padding-bottom: 30px
+
+  &__label
+    padding-right: 20px
+  &__left_other
+    display: none
+
+  &__left_radio
+    margin-right: 10px
+
+  &__left_text
+    max-width: 360px
+    font-weight: 300
+    font-size: 13px
+    line-height: 16px
+    color: $colorText
+    margin-top: 15px
+    margin-bottom: 40px
+
+  &__left_button
+    min-width: 170px
+    background-color: $bgColorDefault
+    margin-left: 0
+
+  &__left_button:hover &__left_svg
+    fill: $colorDefault
+
+  &__left_svg
+    fill: $colorSelect
+    margin-left: 20px
+
+  &__right
+    padding-left: 130px
+
+  &__right_title
+    font-weight: 300
+    font-size: 24px
+    line-height: 29px
+    text-transform: uppercase
+
+  &__right_text
+    @extend .registration__right_title
+    text-transform: none
+    padding-top: 20px
+    padding-bottom: 20px
+
+  &__right_ul
+    font-weight: 300
+    font-size: 24px
+    line-height: 45px
+
+  &__right_ul>&__right_li
+    position: relative
+    padding-left: 35px
+
+  &__right_ul > &__right_li::before
+    content: '✔'
+    position: absolute
+    top: 0
+    left: 0

@@ -1,0 +1,202 @@
+@-webkit-keyframes shadow-drop-center
+  0%
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
+
+  100%
+  -webkit-box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.07)
+  box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.07)
+
+@keyframes shadow-drop-center
+  0%
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
+
+  100%
+    -webkit-box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13)
+    box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13)
+
+@-webkit-keyframes rotate-center
+  0%
+  -webkit-transform: rotate(0)
+  transform: rotate(0)
+
+  100%
+  -webkit-transform: rotate(90deg)
+  transform: rotate(90deg)
+
+@keyframes rotate-center
+  0%
+    -webkit-transform: rotate(0)
+    transform: rotate(0)
+
+  100%
+    -webkit-transform: rotate(90deg)
+    transform: rotate(90deg)
+
+.cart
+  margin-top: 96px
+  margin-bottom: 128px
+  display: flex
+
+  &__item
+    display: flex
+    width: 652px
+    margin: 0 auto
+    margin-bottom: 40px
+    -webkit-animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+    animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+  &__input
+    margin: 0 auto
+    margin-top: 23px
+    max-width: 652px
+    display: flex
+    justify-content: space-between
+
+  &__input_link
+    min-width: 230px
+    padding: 16px 40px
+    font-weight: 300
+    font-size: 14px
+    line-height: 17px
+    color: $colorText
+    margin: 0
+    border: 1px solid $colorBorderInput
+
+  &__item_tittle
+    font-size: 24px
+    line-height: 29px
+    padding-right: 116px
+    padding-bottom: 42px
+
+  &__item_img
+    width: 262px
+
+  &__item_description
+    position: relative
+    width: 100%
+    height: 100%
+    padding: 22px 31px
+    display: flex
+    flex-direction: column
+
+  &__link
+    color: $colorHeading
+    &:hover
+      color: $colorSelectHover
+
+  &__item_delete
+    fill: $colorText
+    position: absolute
+    right: 22px
+    top: 28px
+    cursor: pointer
+    &:hover
+      -webkit-animation: rotate-center 0.3s ease-in-out both
+      animation: rotate-center 0.3s ease-in-out both
+
+  &__item_info
+    font-size: 22px
+    line-height: 26px
+    color: $colorText
+    padding-bottom: 6px
+
+  &__item_pice
+    color: $colorSelect
+
+  &__item_quantity
+    width: 43px
+    height: 25px
+    border: 1px solid $colorBorderInput
+    font-size: 18px
+    line-height: 22px
+    color: #656565
+    text-align: center
+    margin-left: 24px
+
+  &__left 
+    width: 100%
+  
+  &__right
+    display: flex
+    flex-direction: column
+    margin-right: 0
+    margin-left: auto
+
+  &__right_title
+    font-weight: 300
+    font-size: 16px
+    line-height: 19px
+    color: $colorHeading
+    margin-bottom: 20px
+    text-transform: uppercase
+
+  &__right_input
+    width: 359px
+    height: 44px
+    border: 1px solid $colorBorderInput
+    margin-bottom: 21px
+    padding-left: 17px
+    font-weight: 300
+    font-size: 13px
+    line-height: 16px
+    color: $colorText
+
+  &__right_button
+    width: 100px
+    margin-top: 5px
+    margin-bottom: 57px
+    margin-left: 0
+    border: 1px solid $colorBorderInput
+    background: $colorDefault
+    padding: 10px 0px
+    font-weight: 300
+    font-size: 11px
+    line-height: 13px
+    color: $colorText
+  &__right_box1
+    display: flex
+    flex-direction: column
+  &__right_box2
+    width: 360px
+    padding: 40px 45px
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    background-color: #F5F3F3
+
+  &__right_button2
+    width: 100%
+    background-color: $colorSelect
+    color: $colorDefault
+    padding: 15px
+    font-weight: 300
+    font-size: 16px
+    line-height: 19px
+
+  &__right_sub
+    font-size: 11px
+    line-height: 13px
+    color: $colorBorderInput
+    text-transform: uppercase
+    margin-bottom: 12px
+
+  &__right_sub-price, &__right_grand-price
+    padding-left: 30px
+
+  &__right_grand
+    font-weight: 300
+    font-size: 16px
+    line-height: 19px
+    text-transform: uppercase
+    color: $colorHeading
+
+  &__right_grand-price
+    color: $colorSelect
+
+  &__right_line
+    width: 100%
+    height: 1px
+    margin: 20px 0
+    background: #E2E2e2
